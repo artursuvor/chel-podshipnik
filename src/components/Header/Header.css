@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #97918C;
+    padding: 1.67vw 4.4vw 3.33vw 4.4vw;
+  }
+
+  .header-main-logo{
+    width: 15vw;
+    height: auto;
+  }
+  
+  .header-right-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-contact-info a {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#343336;
+    text-decoration: none;
+  }
+
+  .header-contact-info img {
+    width: 2.5vw;
+    cursor: pointer;
+  }
+
+  .header-shopping-cart-svg{
+    padding-left: 3.33vw;
+    padding-right: 2.22vw;
+  }
+  

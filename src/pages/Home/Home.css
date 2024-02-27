@@ -1,0 +1,38 @@
+.home-main-menu-section-size { 
+    width: 46.25vw;
+    height: 57.64vw;
+    background-color: #EDEDED;
+    grid-area: size; 
+}
+.home-main-menu-section-catalog {
+    width: 42.1vw;
+    height: 31.25vw;
+    background-color: #797674; 
+    grid-area: catalog; 
+}
+.home-main-menu-section-delivery { 
+    width: 20vw;
+    height: 24.3vw;
+    background-color: #525150;
+    grid-area: delivery; 
+}
+.home-main-menu-section-contacts { 
+    width: 20vw;
+    height: 24.3vw;
+    background-color: #343336;
+    grid-area: contacts; 
+}
+
+.home-main-menu-section{
+    display: grid;
+    grid-template-areas:
+      'size size catalog catalog'
+      'size size catalog catalog'
+      'size size delivery contacts'
+      'size size delivery contacts';
+    flex-wrap: wrap;
+    gap: 2.15vw;
+    background-color: #ff5d5d;
+    /* background-color: #97918C; */
+    padding: 0vw 4.4vw 3.33vw 4.4vw;
+}
