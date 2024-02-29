@@ -1,40 +1,123 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #97918C;
-    padding: 1.67vw 4.4vw 3.33vw 4.4vw;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .header-main-logo{
-    width: 15vw;
-    height: auto;
-  }
-  
-  .header-right-side {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header-contact-info a {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.67vw;
-    font-weight: 400;
-    line-height: 2.5vw;
-    letter-spacing: 0em;
-    text-align: left;
-    color:#343336;
-    text-decoration: none;
-  }
+header {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #97918C;
+  padding: 2.22vh 4.4vw 4.44vh 4.4vw;
+  transition: background-color 0.3s ease; 
+}
 
-  .header-contact-info img {
-    width: 2.5vw;
-    cursor: pointer;
-  }
+.sticky-header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #97918C;
+  padding: 2.22vh 4.4vw 4.44vh 4.4vw;
+  z-index: 1000;
+  animation: fadeIn 0.6s ease; 
+}
 
-  .header-shopping-cart-svg{
-    padding-left: 3.33vw;
-    padding-right: 2.22vw;
-  }
-  
+.header-main-logo{
+  width: 15vw;
+  height: auto;
+}
+
+.header-right-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-contact-info span {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.67vw;
+  font-weight: 400;
+  text-align: left;
+  color:#343336;
+  text-decoration: none;
+}
+
+
+.header-contact-info a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.67vw;
+  font-weight: 400;
+  line-height: 2.5vw;
+  letter-spacing: 0em;
+  text-align: left;
+  color:#343336;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.header-contact-info a:hover {
+  color: #EDEDED; 
+}
+
+.header-shopping-cart-svg{
+  margin-left: 2.33vw;
+  padding: 1vw;
+  width: 2vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  border-radius: 50%; 
+}
+
+.header-shopping-cart-svg::before {
+  content: ''; 
+  position: absolute;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+.header-shopping-cart-svg:hover {
+  background-color: #ffffff90; 
+  border-radius: 50%; 
+}
+
+.header-shopping-cart-svg:hover::before {
+  opacity: 1; 
+}
+
+.header-user-svg {
+  position: relative;
+  padding: 1vw;
+  width: 2vw;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  border-radius: 50%; 
+}
+
+.header-user-svg::before {
+  content: ''; 
+  position: absolute;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+  border-radius: 50%; 
+}
+
+.header-user-svg:hover {
+  background-color: #ffffff90; 
+  border-radius: 50%; 
+}
+
+.header-user-svg:hover::before {
+  opacity: 1; 
+}
+

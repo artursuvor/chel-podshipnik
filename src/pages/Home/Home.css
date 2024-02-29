@@ -1,28 +1,27 @@
 @import url('https://fonts.cdnfonts.com/css/bicubik');
 
 /* 1st section */
-
 .home-main-menu-section-size { 
     width: 46.25vw;
-    height: 57.64vw;
+    height: 95vh;
     background-color: #EDEDED;
     grid-area: size; 
 }
 .home-main-menu-section-catalog {
     width: 42.1vw;
-    height: 31.25vw;
+    height: 55vh;
     background-color: #797674; 
     grid-area: catalog; 
 }
 .home-main-menu-section-delivery { 
     width: 20vw;
-    height: 24.3vw;
+    height: 35.4vh;
     background-color: #525150;
     grid-area: delivery; 
 }
 .home-main-menu-section-contacts { 
     width: 20vw;
-    height: 24.3vw;
+    height: 35.4vh;
     background-color: #343336;
     grid-area: contacts; 
 }
@@ -36,15 +35,14 @@
       'size size delivery contacts';
     flex-wrap: wrap;
     gap: 2.15vw;
-    background-color: #ff5d5d;
-    /* background-color: #97918C; */
-    padding: 0vw 4.4vw 3.33vw 4.4vw;
+    background-color: #97918C;
+    padding: 0vw 4.4vw 11.11vh 4.4vw;
 }
 
 /* 2nd section */
 
 .home-details-searching{
-    padding: 5.56vw 4.44vw;
+    padding: 7.41vh 4.44vw;
     background-color: #EDEDED;
 }
 
@@ -58,7 +56,6 @@
 }
 
 .home-details-searching-container{
-    background-color: rgb(255, 124, 124);
     justify-content: center;
     align-items: center;
     width: 95%;
@@ -66,7 +63,6 @@
 }
 
 .home-details-searching-container-2{
-    background-color: rgb(135, 124, 255);
     display: flex;
     align-items: center;
 }
@@ -82,16 +78,23 @@ input::placeholder{
 }
 
 input{
-    border: 1px solid #E0E0E0
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.11vw;
+    font-weight: 400;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+}
+
+input{
+    border: 1px solid #E0E0E0;
+    outline: none;
 }
 
 label{
-    background-color: green;
     padding-right: 0.83vw;
 }
 
 .home-details-searching-params {
-    background-color: #343336;
     width: 90%;
     position: relative;
     display: inline-block;
@@ -100,13 +103,9 @@ label{
 }
 
 .input-params{
-    width: 72.9vw;
+    width: 68.7vw;
     height: 1.5vw;
-    padding: 0.69vw 0.83vw;
-}
-
-.input-params::placeholder {
-    padding-left: 2vw
+    padding: 0.69vw 3vw;
 }
 
 .home-details-searching-params img {
@@ -132,4 +131,323 @@ label{
     width: 10vw;
     height: 1.5vw;
     padding: 0.69vw 0.83vw;
+}
+
+.home-details-searching-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10.9vw;
+    padding: 3vw 0vw;
+}
+
+.home-details-clear-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    padding: 0.5vw 1.5vw;
+    margin: 0vw 1vw;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+.home-details-clear-button:hover {
+    color: #fff; 
+    background-color: #333; 
+}
+
+.home-details-show-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    padding: 0.5vw 1.5vw;
+    text-align: left;
+    border: 2px solid black;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.home-details-show-button:hover {
+    color: #fff; 
+    background-color: #333; 
+    border-color: #fff; 
+}
+
+/* 3rd section */
+
+.home-catalog-section{
+    background-color: #343336;
+    padding: 7vh 4.44vw 7vw 4.44vw;
+}
+
+.home-catalog-heading{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 2.22vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+
+.home-catalog-heading-text{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    white-space: pre-line;
+}
+
+.home-catalog-grid{
+    display: grid;
+    grid-template-columns: 49% 24% 24%;
+    gap: 1vw;
+}
+
+.home-catalog-grid > div > p{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #EDEDED;
+}
+
+.home-catalog-grid-bearings-background{
+    background-color: #525150;
+    height: 33vh;
+}
+
+.home-catalog-grid-pins-background{
+    background-color: #797674;   
+    height: 33vh;
+}
+
+.home-catalog-grid-oil-background{
+    background-color: #97918C;
+    height: 33vh;
+}
+
+.home-catalog-grid-2{
+    display: grid;
+    grid-template-columns: 24% 24% 49%;
+    gap: 1vw;
+}
+
+.home-catalog-grid-2 > div > p{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #EDEDED;
+}
+
+.home-catalog-grid-lubricant-background{
+    background-color: #797674;
+    height: 33vh;
+}
+
+.home-catalog-grid-instrument-background{
+    background-color: #797674;   
+    height: 33vh;
+}
+
+.home-catalog-grid-key-background{
+    background-color: #525150;
+    height: 33vh;
+}
+
+.home-catalog-watch-all-button {
+    margin-left: 84%;
+    padding: 3vw 0vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    padding: 0.5vw 1.5vw;
+    text-align: left;
+    border: 2px solid white;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.home-catalog-watch-all-button:hover {
+    color: #333; 
+    background-color: #fff; 
+    border-color: #333; 
+}
+
+/* 4th section */
+
+.home-delivery-section{
+    background-color: #EDEDED;
+    padding: 6vw 4.44vw;
+    display: grid;
+    grid-template-columns: 50% 49%;
+    gap: 4vw;
+}
+
+.home-delivery-head{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 2.22vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+}
+
+.arrow-down{
+    width: 8vw;
+    height: 8vw;
+    justify-self: end;
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease; 
+}
+  
+.arrow-down-anim{
+    width: 8vw;
+    height: 8vw;
+    justify-self: end;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease; 
+}
+
+.home-delivery-drop-menu-1{
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    width: 45vw;
+    padding: 1vw 0;
+}
+
+.home-delivery-drop-menu-2{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    width: 45vw;
+}
+
+.home-delivery-drop-menu-head-text-1{
+    font-family: "Poppins", sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line; 
+}
+
+.home-delivery-drop-menu-head-text-2{
+    font-family: "Poppins", sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line; 
+    margin-top: 3vw; 
+}
+
+.home-delivery-drop-menu-text-1{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.home-delivery-drop-menu-text-2{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 15vw;
+}
+
+/* 5th section */
+
+.home-contacts-section{
+    background-color: #525150;
+    padding: 5vw 4.44vw;
+}
+
+.home-contacts-head{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 2.22vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.home-contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-contacts-container > div {
+    margin-right: 5vw; 
+    margin-bottom: 1vw; 
+}
+
+.home-contacts-container > div:last-child {
+    margin-right: 0; 
+}
+
+.home-contacts-container > div{
+    display: flex;
+    align-items: center;
+}
+
+.home-contacts-container > div > img{
+    width: 1.5vw;
+    height: 1.5vw;
+    padding-right: 1vw;
+}
+
+.home-contacts-container > div > p{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line;
+    color: #fff;
+}
+
+.map-container {
+    width: 100%; 
+    height: 20vw;
+}
+  
+  
+.map-container iframe {
+    width: 100%; 
+    height: 20vw;
 }
