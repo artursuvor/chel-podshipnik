@@ -6,24 +6,97 @@
     height: 95vh;
     background-color: #EDEDED;
     grid-area: size; 
+    position: relative;
+    cursor: pointer;
 }
+
+.home-main-menu-section-size-text-1{
+    position: absolute;
+    white-space: pre-line;
+    left: 5%;
+    top: -2%;
+    font-family: 'Bicubik', sans-serif;
+    font-size: 3.5vw;
+    font-weight: 400;
+    line-height: 4.5vw;
+    letter-spacing: 0em;
+    text-align: left;
+    z-index: 10;
+}
+
+.home-main-menu-section-size-text-2{
+    position: absolute;
+    left: 5%;
+    bottom: 1%;
+    font-family: 'Bicubik', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.section-size-ph{
+    position: absolute;
+    width: 22vw;
+    right: 0;
+    bottom: 5%;
+}
+
 .home-main-menu-section-catalog {
     width: 42.1vw;
     height: 55vh;
     background-color: #797674; 
-    grid-area: catalog; 
+    grid-area: catalog;
+    position: relative;
+    cursor: pointer; 
 }
+.home-main-menu-section-catalog-ph-1{
+    position: absolute;
+    width: 8vw;
+    top: 40%;
+    left: 25%;
+}
+.home-main-menu-section-catalog-ph-2{
+    position: absolute;
+    width: 30vw;
+    bottom: 0%;
+    right: 0%;
+}
+
 .home-main-menu-section-delivery { 
     width: 20vw;
     height: 35.4vh;
     background-color: #525150;
     grid-area: delivery; 
+    position: relative;
+    cursor: pointer;
 }
 .home-main-menu-section-contacts { 
     width: 20vw;
     height: 35.4vh;
     background-color: #343336;
     grid-area: contacts; 
+    position: relative;
+    cursor: pointer;
+}
+
+.button-circle{
+    position: absolute;
+    width: 6vw;
+    right: 1%;
+    top: 1%;
+}
+
+.home-main-menu-section-text-2{
+    position: absolute;
+    left: 5%;
+    bottom: 1%;
+    font-family: 'Bicubik', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #EDEDED;
+    text-align: left;
 }
 
 .home-main-menu-section{
@@ -37,6 +110,29 @@
     gap: 2.15vw;
     background-color: #97918C;
     padding: 0vw 4.4vw 11.11vh 4.4vw;
+}
+
+.home-main-menu-section-size .section-size-ph {
+    transition: transform 0.3s ease, right 0.3s ease; 
+}
+
+.home-main-menu-section-size:hover .section-size-ph {
+    overflow: hidden;
+    right: 2.4%;
+    transform: scale(1.1);
+}
+
+.home-main-menu-section-catalog .home-main-menu-section-catalog-ph-1, 
+.home-main-menu-section-catalog .home-main-menu-section-catalog-ph-2{
+    transition: transform 0.3s ease, right 0.3s ease, bottom 0.3s ease; 
+}
+
+.home-main-menu-section-catalog:hover .home-main-menu-section-catalog-ph-1, 
+.home-main-menu-section-catalog:hover .home-main-menu-section-catalog-ph-2{
+    overflow: hidden;
+    right: 3.8%;
+    bottom: 4.4%;
+    transform: scale(1.1);
 }
 
 /* 2nd section */
@@ -227,16 +323,22 @@ label{
 .home-catalog-grid-bearings-background{
     background-color: #525150;
     height: 33vh;
+    position: relative;
+    cursor: pointer;
 }
 
 .home-catalog-grid-pins-background{
     background-color: #797674;   
     height: 33vh;
+    position: relative;
+    cursor: pointer;
 }
 
 .home-catalog-grid-oil-background{
     background-color: #97918C;
     height: 33vh;
+    position: relative;
+    cursor: pointer;
 }
 
 .home-catalog-grid-2{
@@ -258,16 +360,43 @@ label{
 .home-catalog-grid-lubricant-background{
     background-color: #797674;
     height: 33vh;
+    position: relative;
+    cursor: pointer;
 }
 
 .home-catalog-grid-instrument-background{
     background-color: #797674;   
     height: 33vh;
+    position: relative;
+    cursor: pointer;
 }
 
 .home-catalog-grid-key-background{
     background-color: #525150;
     height: 33vh;
+    position: relative;
+    cursor: pointer;
+}
+
+.home-catalog-bearing-1{
+    position: absolute;
+    top: 11%;
+    left: 35%;
+    width: 12vw;
+}
+
+.home-catalog-bearing-2{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 10vw;
+}
+
+.home-catalog-bearing-3{
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    width: 10vw;
 }
 
 .home-catalog-watch-all-button {
@@ -411,8 +540,7 @@ label{
 }
 
 .home-contacts-container > div {
-    margin-right: 5vw; 
-    margin-bottom: 1vw; 
+    margin-right: 5vw;  
 }
 
 .home-contacts-container > div:last-child {
@@ -441,13 +569,155 @@ label{
     color: #fff;
 }
 
+.home-contacts-container-1,
+.home-contacts-container-2,
+.home-contacts-container-3{
+    margin-bottom: -2vw;
+}
+.home-contacts-container-4,
+.home-contacts-container-5{
+    margin-top: 0.3vw;
+    padding-bottom: 2vw;
+}
+
 .map-container {
     width: 100%; 
     height: 20vw;
 }
   
-  
 .map-container iframe {
     width: 100%; 
     height: 20vw;
+}
+
+/* 5th section */
+
+.home-form-sending-section{
+    background-color: #EDEDED;
+    padding: 5vw 4.44vw 1vw 4.44vw;
+}
+
+.home-form-sending-head{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 2.22vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.home-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-form-1{
+    display: flex;
+    padding: 1vw;
+    position: relative;
+}
+
+.input-mail{
+    height: 1.5vw;
+    padding: 0.69vw 3vw;
+    width: 27vw;
+}
+
+.edit-svg-input-mail{
+    position: absolute;
+    top:62%;
+    left: 3%;
+}
+
+.input-telephone{
+    height: 1.5vw;
+    padding: 0.69vw 1vw;
+    width: 27vw;
+}
+
+.home-form-2{
+    position: relative;
+}
+
+.input-message {
+    width: 61vw;
+    padding: 1vw;
+    padding-bottom: 10vw;
+    border: 1px solid #E0E0E0;
+    word-wrap: break-word; 
+    outline: none;
+    resize: none; 
+    overflow: hidden; 
+    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.11vw;
+    font-weight: 400;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+}
+
+.input-message::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.11vw;
+    font-weight: 400;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+    text-align: left;
+    color: #A7A7A7;
+}
+
+.char-count {
+    position: absolute;
+    top: 23%;
+    right: 2vw;
+    font-size: 1vw;
+    color:#A7A7A7;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: right;
+}
+
+.home-form-3{
+    position: relative;
+}
+
+.input-captcha{
+    width: 57vw;
+    height: 1.5vw;
+    padding: 0.69vw 3vw;
+}
+
+.edit-svg-input-captcha{
+    position: absolute;
+    top:67%;
+    left: 2%;
+}
+
+.home-details-searching-submit-button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.67vw;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    padding: 0.5vw 1.5vw;
+    margin: 0vw 1vw;
+    text-align: left;
+    border: none;
+    color: #fff;
+    background-color: #FF6421;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    margin-left: 52vw;
+}
+
+.home-details-searching-submit-button:hover {
+    color: #fff; 
+    background-color: #333; 
+}
+
+.home-details-searching-button-container{
+    padding: 4vw 0;
+    margin: 0;
 }
