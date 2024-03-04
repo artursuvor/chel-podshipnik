@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Home.css'; 
 
 const Home: React.FC = () => {
@@ -110,7 +110,7 @@ const Home: React.FC = () => {
                 <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
                 <p className='home-main-menu-section-size-text-2'>ПОДОБРАТЬ РАЗМЕР</p>
             </div>
-            <div className='home-main-menu-section-catalog'>
+            <div className='home-main-menu-section-catalog' onClick={() => window.location.href = '/catalog'}>
                 <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
                 <img src='/img/catalog-ph-1.png' alt='catalog-ph-1' className='home-main-menu-section-catalog-ph-1'/>
                 <img src='/img/catalog-ph-2.png' alt='catalog-ph-2' className='home-main-menu-section-catalog-ph-2'/>
@@ -252,7 +252,9 @@ const Home: React.FC = () => {
                     <p>ШПОНКИ И ШПОНОЧНАЯ СТАЛЬ</p>
                 </div>
             </div>
-            <button className='home-catalog-watch-all-button'>Смотреть все</button>
+            <button className='home-catalog-watch-all-button' onClick={() => window.location.href = '/catalog'}>
+                Смотреть все
+            </button>
         </div>
         <div className='home-delivery-section'>
             <div>

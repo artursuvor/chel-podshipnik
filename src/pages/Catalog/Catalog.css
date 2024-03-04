@@ -1,0 +1,206 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+.button-up{
+    position: fixed;
+    width: 4vw;
+    bottom: 1vw;
+    right: 1.5vw;
+    cursor: pointer;
+    z-index: 1030;
+    transition: opacity 0.5s ease; 
+}
+  
+.button-up-hide{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease; 
+    display: none;
+}  
+
+.catalog-page-container{
+    padding: 3vw 4.44vw;
+    background-color: #EDEDED;
+}
+
+.catalog-page-breadcrumbs{
+    font-family: 'Inter', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #525150;
+}
+
+.catalog-page-breadcrumbs span{
+    font-family: 'Inter', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: black;
+}
+
+.catalog-page-head{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 2.22vw;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.catalog-page-head-2{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 2.3vw;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.catalog-page-serch-input-container{
+    padding-top: 1vw;
+}
+
+.catalog-page-searching-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.97vw;
+    font-weight: 500;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+    color: #7E7E7E;
+    text-align: left;
+    margin-bottom: 0.56vw;
+}
+
+.catalog-page-input-params::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.11vw;
+    font-weight: 400;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+    text-align: left;
+    color: #A7A7A7;
+}
+
+.catalog-page-input-params{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.11vw;
+    font-weight: 400;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+}
+
+.catalog-page-input-params{
+    position: relative;
+    border: 1px solid #E0E0E0;
+    outline: none;
+    width: 93%;
+    height: 1.5vw;
+    padding: 0.69vw 2.5vw;
+}
+
+.catalog-page-edit-svg{
+    z-index: 1000;
+    position: absolute;
+    padding: 0.9vw 0vw 0.9vw 0.8vw;
+}
+
+.catalog-page-button-container{
+    padding: 4vw 0vw;
+    width: 80%;
+}
+
+.catalog-page-button-container button {
+    border: 1px solid black;
+    background: transparent;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    border-radius: 48px;
+    font-weight: 400;
+    line-height: 2.5vw;
+    letter-spacing: 0em;
+    padding: 0.5vw 1.5vw;
+    margin-bottom: 0.5vw;
+    cursor: pointer;
+}
+  
+.catalog-page-button-container button:hover {
+    background: black;
+    color: white;
+}
+
+.catalog-page-button-container button.isActive {
+    background: black;
+    color: white;
+}
+
+.catalog-page-result-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.catalog-page-result-container div{
+    border: 1px solid black;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    white-space: pre-line;
+    padding-bottom: 2vw;
+}
+
+.catalog-page-result-container div img{
+    padding: 2vw;
+    width: 10vw;
+    align-self: center;
+}
+
+.catalog-page-result-container div p{
+    padding-left: 1vw;
+    text-align: left;
+}
+
+.btn-in-cart{
+    background-color: #FF6421;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #FF6421;
+    width: 90%;
+    padding: 1vw 0;    
+    cursor: pointer;
+}
+
+.btn-not-in-cart{
+    background-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    width: 90%;
+    padding: 1vw 0;
+    cursor: pointer;
+}
+
+.catalog-page-result-container div p span{
+    color: #97918C;
+}
+  
+.catalog-page-result-price{
+    font-weight: 600;
+}
+
+.catalog-page-result-container div:hover{
+    background-color: #fff;
+}
+

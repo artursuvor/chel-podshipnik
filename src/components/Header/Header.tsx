@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -15,11 +16,13 @@ const Header = () => {
       };
   }, []);
 
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   return (
-    <header className={isSticky ? 'sticky-header' : ''}>
-      <img src='./img/main-logo.png' alt='header-main-logo' className='header-main-logo'/>
+    <header className={isHomePage ? (isSticky ? 'sticky-header' : '') : 'header-not-main'}>
+      <img src='./img/main-logo.png' alt='header-main-logo' className='header-main-logo' onClick={() => window.location.href = '/'}/>
       <div className='header-right-side'>
-        <div className="header-contact-info">
+        <div className={isHomePage ? "header-contact-info" : "header-contact-info-not-main"}>
             <a href="tel:+73517772520">8 (351) 777-25-20</a><span>, </span>
             <a href="tel:+73517772520">777-25-20</a>
         </div>
