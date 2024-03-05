@@ -30,62 +30,69 @@ const Catalog: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState<string>('Все');
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
     const [selectedSubcategories, setSelectedSubcategories] = useState<string[]>([]);
+    const [isSubcategoryMount, setIsSubcategoryMount] = useState<boolean>(false);
 
+    const subcategoriesMap: Record<string, string[]> = {
+        'Подшипники': [
+          'Подшипниковые узлы, корпуса и комплектующие',
+          'Шариковые подшипники',
+          'Роликовые подшипники',
+          // Add more subcategories here...
+        ],
+        // Add subcategories for other categories if needed...
+    };
+    
+    const categoryButtons = [
+        'Все',
+        'Подшипники',
+        'Смазки, масла',
+        'Стопорные кольца',
+        'Шпонки, шпоночная сталь',
+        'Шпильки',
+        'Сальники',
+        'Инструмент',
+        'Пресс-масленки',
+    ];
+     
     useEffect(() => {
         if (selectedCategory === 'Все') {
           setFilteredProducts(products);
         } else {
           const filtered = products.filter((product) => {
             const isCategoryMatch = product.name === selectedCategory;
-      
-            if (selectedSubcategories.length > 0) {
-              return (
-                isCategoryMatch &&
-                selectedSubcategories.includes(product.subcategory)
-              );
-            }
-      
-            return isCategoryMatch;
+            const isSubcategoryMatch = selectedSubcategories.length === 0 || selectedSubcategories.includes(product.subcategory);
+    
+            return isCategoryMatch && isSubcategoryMatch;
           });
-      
+    
           setFilteredProducts(filtered);
         }
-      }, [selectedCategory, selectedSubcategories]);
-      
+    }, [selectedCategory, selectedSubcategories]);
+    
+
     const handleCategoryClick = (category: string, subcategory?: string) => {
-      setSelectedCategory(category);
-  
-      if (subcategory) {
-        const newSubcategories = selectedSubcategories.includes(subcategory)
-          ? selectedSubcategories.filter((s) => s !== subcategory)
-          : [...selectedSubcategories, subcategory];
-        setSelectedSubcategories(newSubcategories);
-      } else {
-        setSelectedSubcategories([]);
-      }
+        setSelectedCategory(category);
+    
+        if (subcategory) {
+            const newSubcategories = selectedSubcategories.includes(subcategory)
+            ? selectedSubcategories.filter((s) => s !== subcategory)
+            : [...selectedSubcategories, subcategory];
+            setSelectedSubcategories(newSubcategories);
+        } else {
+            setSelectedSubcategories([]);
+        }
+    
+        // Обновление isSubcategoryMount
+        const hasSubcategories = subcategoriesMap[category] && subcategoriesMap[category].length > 0;
+        setIsSubcategoryMount(hasSubcategories);
+    
+        const newTrail = ['Catalog', category];
+        if (subcategory) {
+            newTrail.push(subcategory);
+        }
+        setBreadcrumbTrail(newTrail);
     };
 
-    const categoryButtons = [
-      'Все',
-      'Подшипники',
-      'Смазки, масла',
-      'Стопорные кольца',
-      'Шпонки, шпоночная сталь',
-      'Шпильки',
-      'Сальники',
-      'Инструмент',
-      'Пресс-масленки',
-    ];
-  
-    const subcategoriesMap: Record<string, string[]> = {
-      'Подшипники': [
-        'Подшипниковые узлы, корпуса и комплектующие',
-        'Шариковые подшипники',
-        'Роликовые подшипники',
-        // Add more subcategories here...
-      ],
-      // Add subcategories for other categories if needed...
-    };
     // Фильтрация продуктов по выбранной категории
 
 
@@ -117,6 +124,7 @@ const Catalog: React.FC = () => {
 
     // Хлебные крошки
     const [breadcrumbTrail, setBreadcrumbTrail] = useState<string[]>(['Catalog']);
+    const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
 
     useEffect(() => {
       const breadcrumbs = ['Catalog'];
@@ -129,11 +137,25 @@ const Catalog: React.FC = () => {
     }, [selectedCategory]);
   
     const handleBreadcrumbsClick = (index: number) => {
-      const newTrail = breadcrumbTrail.slice(0, index + 1);
-      setBreadcrumbTrail(newTrail);
-  
-      const selectedCategory = newTrail[newTrail.length - 1];
-      setSelectedCategory(selectedCategory);
+        const newTrail = breadcrumbTrail.slice(0, index + 1);
+        setBreadcrumbTrail(newTrail);
+    
+        const selectedCategory = newTrail[newTrail.length - 1];
+        setSelectedCategory(selectedCategory);
+    
+        // Установка подкатегорий, если они есть
+        const hasSubcategories = subcategoriesMap[selectedCategory] && subcategoriesMap[selectedCategory].length > 0;
+        setIsSubcategoryMount(hasSubcategories);
+    
+        // Установка подкатегорий в зависимости от выбранных крошек
+        const lastBreadcrumb = newTrail[newTrail.length - 1];
+        const lastSubcategory = newTrail.length > 2 ? newTrail[newTrail.length - 2] : null;
+    
+        if (lastSubcategory) {
+            setSelectedSubcategories([lastSubcategory]);
+        } else {
+            setSelectedSubcategories([]);
+        }
     };
     // Хлебные крошки
 
@@ -147,10 +169,10 @@ const Catalog: React.FC = () => {
         />
         <p className='catalog-page-breadcrumbs'>
             {breadcrumbTrail.map((breadcrumb, index) => (
-            <span key={breadcrumb} onClick={() => handleBreadcrumbsClick(index)} className='catalog-page-breadcrumb'>
+                <span key={breadcrumb} onClick={() => handleBreadcrumbsClick(index)} className='catalog-page-breadcrumb'>
                 <span className='catalog-page-breadcrumb-slash'>{index !== 0 && ' / '}</span>
-                {breadcrumb}
-            </span>
+                    {breadcrumb}
+                </span>
             ))}
         </p>
         <p className='catalog-page-head'>КАТАЛОГ</p>
@@ -170,32 +192,39 @@ const Catalog: React.FC = () => {
             </label>
         </div>
         <div className='catalog-page-button-container'>
-        {categoryButtons.map((category) => (
-            <div key={category} className='catalog-page-button-category'>
-                <button
-                onClick={() => handleCategoryClick(category)}
-                className={selectedCategory === category ? 'isActive' : ''}
-                >
-                {category}
-                </button>
-                {subcategoriesMap[category] && selectedCategory === category && (
-                <div className='subcategory-container'>
-                    {subcategoriesMap[category].map((subcategory) => (
-                    <button
-                        key={subcategory}
-                        onClick={() => handleCategoryClick(category, subcategory)}
-                        className={
-                        selectedSubcategories.includes(subcategory) ? 'isActive' : ''
-                        }
+            {categoryButtons.map((category) => (
+                <div key={category} className='catalog-page-button-category'>
+                    {isSubcategoryMount ? '' : <button
+                        onClick={() => handleCategoryClick(category)}
+                        className={selectedCategory === category ? 'isActive' : ''}
                     >
-                        {subcategory}
-                    </button>
-                    ))}
+                        {category}
+                    </button> }
+                    {subcategoriesMap[category] && selectedCategory === category && (
+                        <div className='subcategory-container'>
+                            {subcategoriesMap[category].map((subcategory) => (
+                            <button
+                                key={subcategory}
+                                onClick={() => handleCategoryClick(category, subcategory)}
+                                className={
+                                selectedSubcategories.includes(subcategory) ? 'isActive' : ''
+                                }
+                            >
+                                {subcategory}
+                            </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
-                )}
-            </div>
             ))}
         </div> 
+        <div className="catalog-page-result-custom-select">
+            <select>
+                <option value="0">по наличию</option>
+                <option value="1">по цене (с дорогих)</option>
+                <option value="2">по цене (с дешевых)</option>
+            </select>
+        </div>
         <div className='catalog-page-result-container'>
             {filteredProducts.map((product) => (
                 <div key={product.article} className='catalog-page-item-container'>

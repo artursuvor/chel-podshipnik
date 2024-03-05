@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
@@ -27,7 +27,7 @@ const Header = () => {
             <a href="tel:+73517772520">777-25-20</a>
         </div>
         <img src='./img/shopping-cart.png' alt='header-shopping-cart-svg' className='header-shopping-cart-svg'/>
-        <img src='./img/user.png' alt='header-user-svg' className='header-user-svg'/>
+        <Link to={`/login`}><img src='./img/user.png' alt='header-user-svg' className='header-user-svg'/></Link>
       </div>
     </header>
   );

@@ -117,8 +117,10 @@
     padding: 0.9vw 0vw 0.9vw 0.8vw;
 }
 
-.catalog-page-button-category{
-    background-color: red;
+.catalog-page-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3vw 0 2vw 0;
 }
 
 .subcategory-container{
@@ -149,6 +151,24 @@
     background: black;
     color: white;
 }
+
+.catalog-page-result-custom-select{
+    text-align: right;
+    padding: 1vw 0;
+}
+
+.catalog-page-result-custom-select select{
+    background-color: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.11vw;
+    font-weight: 400;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+    cursor: pointer;
+    width: 10vw;
+}
+
 
 .catalog-page-result-container {
     display: grid;
