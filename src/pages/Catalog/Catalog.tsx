@@ -29,59 +29,114 @@ const Catalog: React.FC = () => {
     // Фильтрация продуктов по выбранной категории
     const [selectedCategory, setSelectedCategory] = useState<string>('Все');
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+    const [selectedSubcategories, setSelectedSubcategories] = useState<string[]>([]);
 
     useEffect(() => {
         if (selectedCategory === 'Все') {
           setFilteredProducts(products);
         } else {
-          const filtered = products.filter((product) => product.name === selectedCategory);
+          const filtered = products.filter((product) => {
+            const isCategoryMatch = product.name === selectedCategory;
+      
+            if (selectedSubcategories.length > 0) {
+              return (
+                isCategoryMatch &&
+                selectedSubcategories.includes(product.subcategory)
+              );
+            }
+      
+            return isCategoryMatch;
+          });
+      
           setFilteredProducts(filtered);
         }
-    }, [selectedCategory]);
+      }, [selectedCategory, selectedSubcategories]);
+      
+    const handleCategoryClick = (category: string, subcategory?: string) => {
+      setSelectedCategory(category);
+  
+      if (subcategory) {
+        const newSubcategories = selectedSubcategories.includes(subcategory)
+          ? selectedSubcategories.filter((s) => s !== subcategory)
+          : [...selectedSubcategories, subcategory];
+        setSelectedSubcategories(newSubcategories);
+      } else {
+        setSelectedSubcategories([]);
+      }
+    };
 
-    const handleCategoryClick = (category: string) => {
-        setSelectedCategory(category);
+    const categoryButtons = [
+      'Все',
+      'Подшипники',
+      'Смазки, масла',
+      'Стопорные кольца',
+      'Шпонки, шпоночная сталь',
+      'Шпильки',
+      'Сальники',
+      'Инструмент',
+      'Пресс-масленки',
+    ];
+  
+    const subcategoriesMap: Record<string, string[]> = {
+      'Подшипники': [
+        'Подшипниковые узлы, корпуса и комплектующие',
+        'Шариковые подшипники',
+        'Роликовые подшипники',
+        // Add more subcategories here...
+      ],
+      // Add subcategories for other categories if needed...
     };
     // Фильтрация продуктов по выбранной категории
 
-    const categoryButtons = [
-        'Все',
-        'Подшипники',
-        'Смазки, масла',
-        'Стопорные кольца',
-        'Шпонки, шпоночная сталь',
-        'Шпильки',
-        'Сальники',
-        'Инструмент',
-        'Пресс-масленки',
-    ];
 
+    // Работа с кнопками плюс и минус
     const [cartQuantities, setCartQuantities] = useState<{ [key: string]: number }>({});
     const [hoveredProduct, setHoveredProduct] = useState<string | null>(null);
 
     const handleAddToCart = (product: Product) => {
         // Update cart quantity for the specific product
-        setCartQuantities((prevQuantities) => ({
-        ...prevQuantities,
-        [product.article]: (prevQuantities[product.article] || 0) + 1,
-        }));
+        
     };
-
-    const handleDecreaseQuantity = (article) => {
+    
+    const handleDecreaseQuantity = (article, event) => {
+        event.stopPropagation();
         const updatedQuantities = { ...cartQuantities };
         if (updatedQuantities[article] > 0) {
             updatedQuantities[article] -= 1;
             setCartQuantities(updatedQuantities);
         }
     };
-
-    // Function to handle increasing quantity
-    const handleIncreaseQuantity = (article) => {
+    
+    const handleIncreaseQuantity = (article, event) => {
+        event.stopPropagation();
         const updatedQuantities = { ...cartQuantities };
         updatedQuantities[article] = (updatedQuantities[article] || 0) + 1;
         setCartQuantities(updatedQuantities);
     };
-    
+    // Работа с кнопками плюс и минус
+
+    // Хлебные крошки
+    const [breadcrumbTrail, setBreadcrumbTrail] = useState<string[]>(['Catalog']);
+
+    useEffect(() => {
+      const breadcrumbs = ['Catalog'];
+  
+      if (selectedCategory !== 'Все') {
+        breadcrumbs.push(selectedCategory);
+      }
+  
+      setBreadcrumbTrail(breadcrumbs);
+    }, [selectedCategory]);
+  
+    const handleBreadcrumbsClick = (index: number) => {
+      const newTrail = breadcrumbTrail.slice(0, index + 1);
+      setBreadcrumbTrail(newTrail);
+  
+      const selectedCategory = newTrail[newTrail.length - 1];
+      setSelectedCategory(selectedCategory);
+    };
+    // Хлебные крошки
+
   return (
     <div className="catalog-page-container">
         <img 
@@ -90,7 +145,14 @@ const Catalog: React.FC = () => {
             onClick={scrollToTop} 
             className={isStickyBtn ? 'button-up' : "button-up-hide"}
         />
-        <p className='catalog-page-breadcrumbs'>SITENAME / <span>Catalog</span></p>
+        <p className='catalog-page-breadcrumbs'>
+            {breadcrumbTrail.map((breadcrumb, index) => (
+            <span key={breadcrumb} onClick={() => handleBreadcrumbsClick(index)} className='catalog-page-breadcrumb'>
+                <span className='catalog-page-breadcrumb-slash'>{index !== 0 && ' / '}</span>
+                {breadcrumb}
+            </span>
+            ))}
+        </p>
         <p className='catalog-page-head'>КАТАЛОГ</p>
         <p className='catalog-page-head-2'>
             Более 15 лет мы работаем в сфере подшипников и комплектующих,<br/>
@@ -108,19 +170,35 @@ const Catalog: React.FC = () => {
             </label>
         </div>
         <div className='catalog-page-button-container'>
-            {categoryButtons.map((category) => (
+        {categoryButtons.map((category) => (
+            <div key={category} className='catalog-page-button-category'>
                 <button
-                    key={category}
-                    onClick={() => handleCategoryClick(category)}
-                    className={selectedCategory === category ? 'isActive' : ''}
+                onClick={() => handleCategoryClick(category)}
+                className={selectedCategory === category ? 'isActive' : ''}
                 >
-                    {category}
+                {category}
                 </button>
+                {subcategoriesMap[category] && selectedCategory === category && (
+                <div className='subcategory-container'>
+                    {subcategoriesMap[category].map((subcategory) => (
+                    <button
+                        key={subcategory}
+                        onClick={() => handleCategoryClick(category, subcategory)}
+                        className={
+                        selectedSubcategories.includes(subcategory) ? 'isActive' : ''
+                        }
+                    >
+                        {subcategory}
+                    </button>
+                    ))}
+                </div>
+                )}
+            </div>
             ))}
-        </div>
+        </div> 
         <div className='catalog-page-result-container'>
             {filteredProducts.map((product) => (
-                <div key={product.article} >
+                <div key={product.article} className='catalog-page-item-container'>
                     {product.img && <img src={product.img} alt={product.name} />}
                     <p>{product.name}</p>
                     <p>{product.brandName}</p>
@@ -137,11 +215,28 @@ const Catalog: React.FC = () => {
                         className={cartQuantities[product.article] ? 'btn-in-cart' : 'btn-not-in-cart'}
                     >
                         {hoveredProduct === product.article ? (
-                            <div>
-                                <button onClick={() => handleDecreaseQuantity(product.article)}>-</button>
-                                {cartQuantities[product.article] || 0}
-                                <button onClick={() => handleIncreaseQuantity(product.article)}>+</button>
-                            </div>
+                            <span className='plus-minus'>
+                                <button 
+                                    onClick={(event) => handleDecreaseQuantity(product.article, event)} 
+                                    className='minus'
+                                    style={{ color: cartQuantities[product.article] > 0 ? 'white' : 'black' }}
+                                >
+                                    -
+                                </button>
+                                <p 
+                                    className='plus-minus-text'
+                                    style={{ color: cartQuantities[product.article] > 0 ? 'white' : 'black' }}
+                                >
+                                    {cartQuantities[product.article] || 0}
+                                </p>
+                                <button 
+                                    onClick={(event) => handleIncreaseQuantity(product.article, event)} 
+                                    className='plus'
+                                    style={{ color: cartQuantities[product.article] > 0 ? 'white' : 'black' }}
+                                >
+                                    +
+                                </button>
+                            </span>
                         ) : (
                             'В корзину'
                         )}

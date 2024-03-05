@@ -6,4 +6,7 @@ export type Product = {
     article: string;
     pricePerUnit: string;
     img?: string;
-};
+    subcategory?: string;
+  };
+  
+//Data.tsx
