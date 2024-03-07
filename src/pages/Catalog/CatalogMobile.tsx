@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { Product } from './Data.tsx';
 import products from './productsData.ts';
-import './Catalog.css'
+import './CatalogMobile.css'
 // нужно сдела уникальный ключ id для продуктов, пока что там стоит article
-const Catalog: React.FC = () => {
+const CatalogMobile: React.FC = () => {
     // Button-up 
     const [isStickyBtn, setStickyBtn] = useState(false);
 
@@ -160,43 +160,43 @@ const Catalog: React.FC = () => {
     // Хлебные крошки
 
   return (
-    <div className="catalog-page-container">
+    <div className="catalog-page-container-mobile">
         <img 
             src="/img/button_up.png" 
             alt="button_circle_up" 
             onClick={scrollToTop} 
-            className={isStickyBtn ? 'button-up' : "button-up-hide"}
+            className={isStickyBtn ? 'button-up-mobile' : "button-up-hide-mobile"}
         />
-        <p className='catalog-page-breadcrumbs'>
+        <p className='catalog-page-breadcrumbs-mobile'>
             {breadcrumbTrail.map((breadcrumb, index) => (
-                <span key={breadcrumb} onClick={() => handleBreadcrumbsClick(index)} className='catalog-page-breadcrumb'>
-                <span className='catalog-page-breadcrumb-slash'>{index !== 0 && ' / '}</span>
+                <span key={breadcrumb} onClick={() => handleBreadcrumbsClick(index)} className='catalog-page-breadcrumb-mobile'>
+                <span className='catalog-page-breadcrumb-slash-mobile'>{index !== 0 && ' / '}</span>
                     {breadcrumb}
                 </span>
             ))}
         </p>
-        <p className='catalog-page-head'>КАТАЛОГ</p>
-        <p className='catalog-page-head-2'>
+        <p className='catalog-page-head-mobile'>КАТАЛОГ</p>
+        <p className='catalog-page-head-2-mobile'>
             Более 15 лет мы работаем в сфере подшипников и комплектующих,<br/>
             обеспечивая их доставку до конечного потребителя.<br/>
             Мы предлагаем импортные подшипники, а так же отечественных производителей, любых модификаций.
         </p>
-        <div className='catalog-page-serch-input-container'>
-            <p className='catalog-page-searching-text'>Поиск</p>
-            <label className='catalog-page-label'>
+        <div className='catalog-page-serch-input-container-mobile'>
+            <p className='catalog-page-searching-text-mobile'>Поиск</p>
+            <label className='catalog-page-label-mobile'>
                 <img src='./img/edit.png' alt='edit-svg' className='catalog-page-edit-svg'/>
                 <input 
                     placeholder='Введите наименование, код, каталожный номер или производителя' 
-                    className='catalog-page-input-params'
+                    className='catalog-page-input-params-mobile'
                 />
             </label>
         </div>
-        <div className='catalog-page-button-container'>
+        <div className='catalog-page-button-container-mobile'>
             {categoryButtons.map((category) => (
-                <div key={category} className='catalog-page-button-category'>
+                <div key={category} className='catalog-page-button-category-mobile'>
                     {isSubcategoryMount ? '' : <button
                         onClick={() => handleCategoryClick(category)}
-                        className={selectedCategory === category ? 'isActive' : ''}
+                        className={selectedCategory === category ? 'isActive-mobile' : ''}
                     >
                         {category}
                     </button> }
@@ -207,7 +207,7 @@ const Catalog: React.FC = () => {
                                 key={subcategory}
                                 onClick={() => handleCategoryClick(category, subcategory)}
                                 className={
-                                selectedSubcategories.includes(subcategory) ? 'isActive' : ''
+                                selectedSubcategories.includes(subcategory) ? 'isActive-mobile' : ''
                                 }
                             >
                                 {subcategory}
@@ -218,16 +218,16 @@ const Catalog: React.FC = () => {
                 </div>
             ))}
         </div> 
-        <div className="catalog-page-result-custom-select">
+        <div className="catalog-page-result-custom-select-mobile">
             <select>
                 <option value="0">по наличию</option>
                 <option value="1">по цене (с дорогих)</option>
                 <option value="2">по цене (с дешевых)</option>
             </select>
         </div>
-        <div className='catalog-page-result-container'>
+        <div className='catalog-page-result-container-mobile'>
             {filteredProducts.map((product) => (
-                <div key={product.article} className='catalog-page-item-container'>
+                <div key={product.article} className='catalog-page-item-container-mobile'>
                     {product.img && <img src={product.img} alt={product.name} />}
                     <p>{product.name}</p>
                     <p>{product.brandName}</p>
@@ -236,31 +236,31 @@ const Catalog: React.FC = () => {
                     </p>
                     <p><span>Размеры: </span>{product.sizes}</p>
                     <p><span>Арт.: </span>{product.article}</p>
-                    <p className='catalog-page-result-price'>{product.pricePerUnit}</p>
+                    <p className='catalog-page-result-price-mobile'>{product.pricePerUnit}</p>
                     <button
                         onClick={() => handleAddToCart(product)}
                         onMouseEnter={() => setHoveredProduct(product.article)}
                         onMouseLeave={() => setHoveredProduct(null)}
-                        className={cartQuantities[product.article] ? 'btn-in-cart' : 'btn-not-in-cart'}
+                        className={cartQuantities[product.article] ? 'btn-in-cart-mobile' : 'btn-not-in-cart-mobile'}
                     >
                         {hoveredProduct === product.article ? (
-                            <span className='plus-minus'>
+                            <span className='plus-minus-mobile'>
                                 <button 
                                     onClick={(event) => handleDecreaseQuantity(product.article, event)} 
-                                    className='minus'
+                                    className='minus-mobile'
                                     style={{ color: cartQuantities[product.article] > 0 ? 'white' : 'black' }}
                                 >
                                     -
                                 </button>
                                 <p 
-                                    className='plus-minus-text'
+                                    className='plus-minus-text-mobile'
                                     style={{ color: cartQuantities[product.article] > 0 ? 'white' : 'black' }}
                                 >
                                     {cartQuantities[product.article] || 0}
                                 </p>
                                 <button 
                                     onClick={(event) => handleIncreaseQuantity(product.article, event)} 
-                                    className='plus'
+                                    className='plus-mobile'
                                     style={{ color: cartQuantities[product.article] > 0 ? 'white' : 'black' }}
                                 >
                                     +
@@ -277,4 +277,4 @@ const Catalog: React.FC = () => {
   );
 };
 
-export default Catalog;
+export default CatalogMobile;

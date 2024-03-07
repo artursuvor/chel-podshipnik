@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../Header/Header.tsx";
+import HeaderMobile from "../Header/HeaderMobile.tsx";
 import './Layout.css'
 
-const Layout: React.FC = () => {
+const LayoutMobile: React.FC = () => {
     
     return (
         <div className="site-wrapper">
-            <Header />
+            <HeaderMobile />
             <main>
                 <Outlet />
             </main>
@@ -15,4 +15,4 @@ const Layout: React.FC = () => {
     );
 };
 
-export default Layout;
+export default LayoutMobile;

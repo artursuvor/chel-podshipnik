@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer/Footer.tsx";
-import './Home.css'; 
+import FooterMobile from "../../components/Footer/FooterMobile.tsx";
+import './HomeMobile.css'; 
 
-const Home: React.FC = () => {
+const HomeMobile: React.FC = () => {
     const [searchText, setSearchText] = useState('');
     const [insideDiameterFrom, setInsideDiameterFrom] = useState('');
     const [insideDiameterTo, setInsideDiameterTo] = useState('');
@@ -103,51 +103,51 @@ const Home: React.FC = () => {
     }
   };
   return (
-    <div className="home-container">
-        <div className='home-main-menu-section'>
-            <div className='home-main-menu-section-size'>
-                <p className='home-main-menu-section-size-text-1'>БОЛЬШЕ, ЧЕМ<br/>ПРОСТО<br/>ПОДШИПНИКИ</p>
-                <img src='/img/section-size-ph.png' alt='section-size-ph' className='section-size-ph'/>
-                <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
-                <p className='home-main-menu-section-size-text-2'>ПОДОБРАТЬ РАЗМЕР</p>
+    <div className="home-container-mobile">
+        <div className='home-main-menu-section-mobile'>
+            <div className='home-main-menu-section-size-mobile'>
+                <p className='home-main-menu-section-size-text-1-mobile'>БОЛЬШЕ, ЧЕМ<br/>ПРОСТО<br/>ПОДШИПНИКИ</p>
+                <img src='/img/section-size-ph.png' alt='section-size-ph' className='section-size-ph-mobile'/>
+                <img src='/img/button_circle.png' alt='button-circle' className='button-circle-mobile'/>
+                <p className='home-main-menu-section-size-text-2-mobile'>ПОДОБРАТЬ РАЗМЕР</p>
             </div>
-            <div className='home-main-menu-section-catalog' onClick={() => window.location.href = '/catalog'}>
-                <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
-                <img src='/img/catalog-ph-1.png' alt='catalog-ph-1' className='home-main-menu-section-catalog-ph-1'/>
-                <img src='/img/catalog-ph-2.png' alt='catalog-ph-2' className='home-main-menu-section-catalog-ph-2'/>
-                <p className='home-main-menu-section-text-2'>КАТАЛОГ</p>
+            <div className='home-main-menu-section-catalog-mobile' onClick={() => window.location.href = '/catalog'}>
+                <img src='/img/button_circle.png' alt='button-circle' className='button-circle-mobile'/>
+                <img src='/img/catalog-ph-1.png' alt='catalog-ph-1' className='home-main-menu-section-catalog-ph-1-mobile'/>
+                <img src='/img/catalog-ph-2.png' alt='catalog-ph-2' className='home-main-menu-section-catalog-ph-2-mobile'/>
+                <p className='home-main-menu-section-text-2-mobile'>КАТАЛОГ</p>
             </div>
-            <div className='home-main-menu-section-delivery'>
+            <div className='home-main-menu-section-delivery-mobile'>
                 <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
-                <p className='home-main-menu-section-text-2'>ДОСТАВКА</p>
+                <p className='home-main-menu-section-text-2-mobile'>ДОСТАВКА</p>
             </div>
-            <div className='home-main-menu-section-contacts'>
-                <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
-                <p className='home-main-menu-section-text-2'>КОНТАКТЫ</p>
+            <div className='home-main-menu-section-contacts-mobile'>
+                <img src='/img/button_circle.png' alt='button-circle' className='button-circle-mobile'/>
+                <p className='home-main-menu-section-text-2-mobile'>КОНТАКТЫ</p>
             </div>
         </div>
-        <div className='home-details-searching'>
-            <p className='home-details-searching-head'>ПОИСК ДЕТАЛИ ПО РАЗМЕРУ</p>
-            <div className='home-details-searching-container'>
-                <div className='home-details-searching-params'>
-                    <p className='home-details-searching-text'>Параметры поиска</p>
+        <div className='home-details-searching-mobile'>
+            <p className='home-details-searching-head-mobile'>ПОИСК ДЕТАЛИ ПО РАЗМЕРУ</p>
+            <div className='home-details-searching-container-mobile'>
+                <div className='home-details-searching-params-mobile'>
+                    <p className='home-details-searching-text-mobile'>Параметры поиска</p>
                     <label>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg'/>
+                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-mobile'/>
                         <input 
                             placeholder='Введите наименование, код, каталожный номер или производителя' 
-                            className='input-params'
+                            className='input-params-mobile'
                             value={searchText}
                             onChange={handleSearchTextChange}
                         />
                     </label>
                 </div>
-                <div className='home-details-searching-container-2'>
-                    <div className='home-details-searching-inside-diameter'>
-                        <p className='home-details-searching-text'>Внутренний диаметр. d</p>
+                <div className='home-details-searching-container-2-mobile'>
+                    <div className='home-details-searching-inside-diameter-mobile'>
+                        <p className='home-details-searching-text-mobile'>Внутренний диаметр. d</p>
                         <label>
                             <input 
                                 placeholder='от' 
-                                className='input-inside-diameter-from'
+                                className='input-inside-diameter-from-mobile'
                                 value={insideDiameterFrom}
                                 onChange={handleInsideDiameterFromChange}
                             />
@@ -155,18 +155,18 @@ const Home: React.FC = () => {
                         <label>
                             <input 
                                 placeholder='до' 
-                                className='input-inside-diameter-to'
+                                className='input-inside-diameter-to-mobile'
                                 value={insideDiameterTo}
                                 onChange={handleInsideDiameterToChange}
                             />
                         </label>
                     </div>
-                    <div className='home-details-searching-outside-diameter'>
-                        <p className='home-details-searching-text'>Наружный диаметр. d</p>
+                    <div className='home-details-searching-outside-diameter-mobile'>
+                        <p className='home-details-searching-text-mobile'>Наружный диаметр. d</p>
                         <label>
                             <input 
                                 placeholder='от'
-                                className='input-outside-diameter-from'
+                                className='input-outside-diameter-from-mobile'
                                 value={outsideDiameterFrom}
                                 onChange={handleOutsideDiameterFromChange}
                             />
@@ -174,18 +174,18 @@ const Home: React.FC = () => {
                         <label>
                             <input 
                                 placeholder='до' 
-                                className='input-outside-diameter-to'
+                                className='input-outside-diameter-to-mobile'
                                 value={outsideDiameterTo}
                                 onChange={handleOutsideDiameterToChange}
                             />
                         </label>
                     </div>
-                    <div className='home-details-searching-width'>
-                        <p className='home-details-searching-text'>Внутренний диаметр. d</p>
+                    <div className='home-details-searching-width-mobile'>
+                        <p className='home-details-searching-text-mobile'>Внутренний диаметр. d</p>
                         <label>
                             <input 
                                 placeholder='от' 
-                                className='input-inside-searching-width-from'
+                                className='input-inside-searching-width-from-mobile'
                                 value={widthFrom}
                                 onChange={handleWidthFromChange}
                             />
@@ -193,97 +193,97 @@ const Home: React.FC = () => {
                         <label>
                             <input 
                                 placeholder='до' 
-                                className='input-inside-searching-width-to'
+                                className='input-inside-searching-width-to-mobile'
                                 value={widthTo}
                                 onChange={handleWidthToChange}
                             />
                         </label>
                     </div>
                 </div>
-                <div className='home-details-searching-buttons-container'>
-                    <button className='home-details-clear-button' onClick={handleReset}>Сбросить</button>
-                    <button className='home-details-show-button' onClick={handleShowResults}>Показать</button>
+                <div className='home-details-searching-buttons-container-mobile'>
+                    <button className='home-details-clear-button-mobile' onClick={handleReset}>Сбросить</button>
+                    <button className='home-details-show-button-mobile' onClick={handleShowResults}>Показать</button>
                 </div>
             </div>
         </div>
-        <div className='home-catalog-section'>
-            <p className='home-catalog-heading'>КАТАЛОГ</p>
-            <p className='home-catalog-heading-text'>
+        <div className='home-catalog-section-mobile'>
+            <p className='home-catalog-heading-mobile'>КАТАЛОГ</p>
+            <p className='home-catalog-heading-text-mobile'>
                 Более 15 лет мы работаем в сфере подшипников и комплектующих,<br/>
                 обеспечивая их доставку до конечного потребителя.<br/> 
                 Мы предлагаем импортные подшипники, а так же отечественных производителей, любых модификаций.
             </p>
-            <div className='home-catalog-grid'>
-                <div className='home-catalog-grid-bearings'>
-                    <div className='home-catalog-grid-bearings-background'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1'/>
+            <div className='home-catalog-grid-mobile'>
+                <div className='home-catalog-grid-bearings-mobile'>
+                    <div className='home-catalog-grid-bearings-background-mobile'>
+                        <img src='/img/bearing.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
                     </div>
                     <p>ПОДШИПНИКИ</p>
                 </div>
-                <div className='home-catalog-grid-pins'>
-                    <div className='home-catalog-grid-pins-background'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2'/>
+                <div className='home-catalog-grid-pins-mobile'>
+                    <div className='home-catalog-grid-pins-background-mobile'>
+                        <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
                     </div>
                     <p>ШПИЛЬКИ</p>
                 </div>
-                <div className='home-catalog-grid-oil'>
-                    <div className='home-catalog-grid-oil-background'>
-                        <img src='/img/bearing-2.png' alt='home-catalog-ph-3' className='home-catalog-bearing-3'/>
+                <div className='home-catalog-grid-oil-mobile'>
+                    <div className='home-catalog-grid-oil-background-mobile'>
+                        <img src='/img/bearing-2.png' alt='home-catalog-ph-3' className='home-catalog-bearing-3-mobile'/>
                     </div>
                     <p>САЛЬНИКИ</p>
                 </div>
             </div>
-            <div className='home-catalog-grid-2'>    
-                <div className='home-catalog-grid-lubricant'>
-                    <div className='home-catalog-grid-lubricant-background'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2'/>
+            <div className='home-catalog-grid-2-mobile'>    
+                <div className='home-catalog-grid-lubricant-mobile'>
+                    <div className='home-catalog-grid-lubricant-background-mobile'>
+                        <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
                     </div>
                     <p>СМАЗКИ И МАСЛА</p>
                 </div>
-                <div className='home-catalog-grid-instrument'>
-                    <div className='home-catalog-grid-instrument-background'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2'/>
+                <div className='home-catalog-grid-instrument-mobile'>
+                    <div className='home-catalog-grid-instrument-background-mobile'>
+                        <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
                     </div>
                     <p>ИНСТРУМЕНТ</p>
                 </div>
-                <div className='home-catalog-grid-key'>
-                    <div className='home-catalog-grid-key-background'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1'/>
+                <div className='home-catalog-grid-key-mobile'>
+                    <div className='home-catalog-grid-key-background-mobile'>
+                        <img src='/img/bearing.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
                     </div>
                     <p>ШПОНКИ И ШПОНОЧНАЯ СТАЛЬ</p>
                 </div>
             </div>
-            <button className='home-catalog-watch-all-button' onClick={() => window.location.href = '/catalog'}>
+            <button className='home-catalog-watch-all-button-mobile' onClick={() => window.location.href = '/catalog'}>
                 Смотреть все
             </button>
         </div>
-        <div className='home-delivery-section'>
+        <div className='home-delivery-section-mobile'>
             <div>
-                <p className='home-delivery-head'>ДОСТАВКА</p>
-                <div className='home-delivery-drop-menu'>
-                    <div className='home-delivery-drop-menu-1' onClick={toggleMenu1}>
-                        <p className='home-delivery-drop-menu-head-text-1'>
+                <p className='home-delivery-head-mobile'>ДОСТАВКА</p>
+                <div className='home-delivery-drop-menu-mobile'>
+                    <div className='home-delivery-drop-menu-1-mobile' onClick={toggleMenu1}>
+                        <p className='home-delivery-drop-menu-head-text-1-mobile'>
                             Доставка курьером <br/>или транспортной компанией
                         </p>
                         <img 
                             src='./img/arrow_down.png' 
                             alt='arrow_down' 
-                            className={menu1Visible ? `arrow-down` : `arrow-down-anim`}
+                            className={menu1Visible ? `arrow-down-mobile` : `arrow-down-anim-mobile`}
                         />
                     </div>
-                    <div className='home-delivery-drop-menu-2' onClick={toggleMenu2}>
-                        <p className='home-delivery-drop-menu-head-text-2'>Самовывоз</p>
+                    <div className='home-delivery-drop-menu-2-mobile' onClick={toggleMenu2}>
+                        <p className='home-delivery-drop-menu-head-text-2-mobile'>Самовывоз</p>
                         <img 
                             src='./img/arrow_down.png' 
                             alt='arrow_down' 
-                            className={menu2Visible ? `arrow-down` : `arrow-down-anim`}
+                            className={menu2Visible ? `arrow-down-mobile` : `arrow-down-anim-mobile`}
                         />
                     </div>
                 </div>
             </div>
             <div>
                 {menu1Visible && (
-                    <div className='home-delivery-drop-menu-text-1'>
+                    <div className='home-delivery-drop-menu-text-1-mobile'>
                         <p>
                             Стоимость доставки не входит в цену товара и оплачивается по соответствующим тарифам транспортной компании или курьерской службы.
                             <br/><br/>
@@ -298,37 +298,37 @@ const Home: React.FC = () => {
                     </div>
                 )}
                 {menu2Visible && (
-                    <div className='home-delivery-drop-menu-text-2'>
+                    <div className='home-delivery-drop-menu-text-2-mobile'>
                         <p>Самовывоз возможен в будни с 09–00 до 17–00, в субботу с 09–30 до 14–00.</p>
                     </div>
                 )}
             </div>
         </div>
-        <div className='home-contacts-section'>
-            <p className='home-contacts-head'>КОНТАКТЫ</p>
-            <div className='home-contacts-container'>
-                <div className='home-contacts-container-1'>
+        <div className='home-contacts-section-mobile'>
+            <p className='home-contacts-head-mobile'>КОНТАКТЫ</p>
+            <div className='home-contacts-container-mobile'>
+                <div className='home-contacts-container-1-mobile'>
                     <img src='./img/phone.png' alt='phone'/>
                     <p>8 (351) 256-97-97,  256-97-49</p>
                 </div>
-                <div className='home-contacts-container-2'>
+                <div className='home-contacts-container-2-mobile'>
                     <img src='./img/device-phone-mobile.png' alt='device-phone-mobile'/>
                     <p>8 (351) 777-25-20, 777-25-30</p>
                 </div>
-                <div className='home-contacts-container-3'>
+                <div className='home-contacts-container-3-mobile'>
                     <img src='./img/envelope.png' alt='envelope'/>
                     <p>tdchelps@mail.ru</p>
                 </div>
-                <div className='home-contacts-container-4'>
+                <div className='home-contacts-container-4-mobile'>
                     <img src='./img/home.png' alt='home'/>
                     <p>454108 г. Челябинск ул. Харлова 14 к. 2 офис 205</p>
                 </div>
-                <div className='home-contacts-container-5'>
+                <div className='home-contacts-container-5-mobile'>
                     <img src='./img/clock.png' alt='clock'/>
                     <p>пн-пт 08:30 – 17:30 сб 09:00 – 14:00 вс – выходной</p>
                 </div>
             </div>    
-            <div className='map-container'>
+            <div className='map-container-mobile'>
                 <iframe
                     title="Yandex Map"
                     src="https://yandex.ru/profile/1022366044?no-distribution=1&view-state=mini&source=wizbiz_new_map_single"
@@ -338,31 +338,31 @@ const Home: React.FC = () => {
                 />
             </div>        
         </div>
-        <div className='home-form-sending-section' onSubmit={handleSubmit}>
-            <p className='home-form-sending-head'>СВЯЖИТЕСЬ С НАМИ</p>
-            <form className='home-form'>
-                <div className='home-form-1'>
+        <div className='home-form-sending-section-mobile' onSubmit={handleSubmit}>
+            <p className='home-form-sending-head-mobile'>СВЯЖИТЕСЬ С НАМИ</p>
+            <form className='home-form-mobile'>
+                <div className='home-form-1-mobile'>
                     <label>
-                        <p className='home-details-searching-text'>Ваша почта</p>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-mail'/>
+                        <p className='home-details-searching-text-mobile'>Ваша почта</p>
+                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-mail-mobile'/>
                         <input 
                             placeholder='На эту почту придет ответ' 
-                            className='input-mail'
+                            className='input-mail-mobile'
                             value={mailText}
                             onChange={handleMailTextChange}
                         />
                     </label>
                     <label>
-                        <p className='home-details-searching-text'>Ваш телефон</p>
+                        <p className='home-details-searching-text-mobile'>Ваш телефон</p>
                         <input 
-                            className='input-telephone'
+                            className='input-telephone-mobile'
                             value={telephoneText}
                             onChange={handleTelephoneTextChange}
                         />
                     </label>
                 </div>
-                <div className='home-form-2'>
-                    <p className='home-details-searching-text'>Ваше сообщение</p>
+                <div className='home-form-2-mobile'>
+                    <p className='home-details-searching-text-mobile'>Ваше сообщение</p>
                     <label>
                         <textarea
                             name="message"
@@ -370,31 +370,31 @@ const Home: React.FC = () => {
                             onChange={handleMessageTextChange}
                             maxLength={225}
                             placeholder='Опишите в нескольких предложениях ваш вопрос..' 
-                            className='input-message'
+                            className='input-message-mobile'
                         />
-                        <span className='char-count'>{messageText.length}/225</span>
+                        <span className='char-count-mobile'>{messageText.length}/225</span>
                     </label>
                 </div>
-                <div className='home-form-3'>
-                    <p className='home-details-searching-text'>CAPTCHA</p>
+                <div className='home-form-3-mobile'>
+                    <p className='home-details-searching-text-mobile'>CAPTCHA</p>
                     <label>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-captcha'/>
+                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-captcha-mobile'/>
                         <input 
                             placeholder='Напишите цифрой сколько будет' 
-                            className='input-captcha'
+                            className='input-captcha-mobile'
                             value={captchaText}
                             onChange={handleCaptchaTextChange}
                         />
                     </label>
                 </div>
-                <div className='home-details-searching-button-container'>
-                    <button type="submit" className="home-details-searching-submit-button">Отправить</button>
+                <div className='home-details-searching-button-container-mobile'>
+                    <button type="submit" className="home-details-searching-submit-button-mobile">Отправить</button>
                 </div>
             </form>
         </div>
-        <Footer />
+        <FooterMobile />
     </div>
   );
 };
 
-export default Home;
+export default HomeMobile;

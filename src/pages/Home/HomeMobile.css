@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/bicubik');
 
 /* 1st section */
-.home-main-menu-section-size { 
+.home-main-menu-section-size-mobile{ 
     width: 46.25vw;
     height: 43.5vw;
     background-color: #EDEDED;
@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.home-main-menu-section-size-text-1{
+.home-main-menu-section-size-text-1-mobile{
     position: absolute;
     white-space: pre-line;
     left: 5%;
@@ -24,7 +24,7 @@
     z-index: 10;
 }
 
-.home-main-menu-section-size-text-2{
+.home-main-menu-section-size-text-2-mobile{
     position: absolute;
     left: 5%;
     bottom: 1%;
@@ -35,14 +35,14 @@
     text-align: left;
 }
 
-.section-size-ph{
+.section-size-ph-mobile{
     position: absolute;
     width: 22vw;
     right: 0;
     bottom: 5%;
 }
 
-.home-main-menu-section-catalog {
+.home-main-menu-section-catalog-mobile{
     width: 42.1vw;
     height: 25vw;
     background-color: #797674; 
@@ -50,20 +50,20 @@
     position: relative;
     cursor: pointer; 
 }
-.home-main-menu-section-catalog-ph-1{
+.home-main-menu-section-catalog-ph-1-mobile{
     position: absolute;
     width: 8vw;
     top: 40%;
     left: 25%;
 }
-.home-main-menu-section-catalog-ph-2{
+.home-main-menu-section-catalog-ph-2-mobile{
     position: absolute;
     width: 30vw;
     bottom: 0%;
     right: 0%;
 }
 
-.home-main-menu-section-delivery { 
+.home-main-menu-section-delivery-mobile{ 
     width: 20vw;
     height: 16.3vw;
     background-color: #525150;
@@ -71,7 +71,7 @@
     position: relative;
     cursor: pointer;
 }
-.home-main-menu-section-contacts { 
+.home-main-menu-section-contacts-mobile{ 
     width: 20vw;
     height: 16.3vw;
     background-color: #343336;
@@ -80,14 +80,14 @@
     cursor: pointer;
 }
 
-.button-circle{
+.button-circle-mobile{
     position: absolute;
     width: 6vw;
     right: 1%;
     top: 1%;
 }
 
-.home-main-menu-section-text-2{
+.home-main-menu-section-text-2-mobile{
     position: absolute;
     left: 5%;
     bottom: 1%;
@@ -99,7 +99,7 @@
     text-align: left;
 }
 
-.home-main-menu-section{
+.home-main-menu-section-mobile{
     display: grid;
     grid-template-areas:
       'size size catalog catalog'
@@ -112,23 +112,23 @@
     padding: 0vw 4.4vw 8vw 4.4vw;
 }
 
-.home-main-menu-section-size .section-size-ph {
+.home-main-menu-section-size-mobile .section-size-ph-mobile{
     transition: transform 0.3s ease, right 0.3s ease; 
 }
 
-.home-main-menu-section-size:hover .section-size-ph {
+.home-main-menu-section-size-mobile:hover .section-size-ph-mobile{
     overflow: hidden;
     right: 2.4%;
     transform: scale(1.1);
 }
 
-.home-main-menu-section-catalog .home-main-menu-section-catalog-ph-1, 
-.home-main-menu-section-catalog .home-main-menu-section-catalog-ph-2{
+.home-main-menu-section-catalog-mobile .home-main-menu-section-catalog-ph-1-mobile, 
+.home-main-menu-section-catalog-mobile .home-main-menu-section-catalog-ph-2-mobile{
     transition: transform 0.3s ease, right 0.3s ease, bottom 0.3s ease; 
 }
 
-.home-main-menu-section-catalog:hover .home-main-menu-section-catalog-ph-1, 
-.home-main-menu-section-catalog:hover .home-main-menu-section-catalog-ph-2{
+.home-main-menu-section-catalog-mobile:hover .home-main-menu-section-catalog-ph-1-mobile, 
+.home-main-menu-section-catalog-mobile:hover .home-main-menu-section-catalog-ph-2-mobile{
     overflow: hidden;
     right: 3.8%;
     bottom: 4.4%;
@@ -137,12 +137,12 @@
 
 /* 2nd section */
 
-.home-details-searching{
+.home-details-searching-mobile{
     padding: 4vw 4.44vw;
     background-color: #EDEDED;
 }
 
-.home-details-searching-head{
+.home-details-searching-head-mobile{
     font-family: 'Bicubik', sans-serif;
     font-size: 2.22vw;
     font-weight: 400;
@@ -151,17 +151,21 @@
     text-align: left;
 }
 
-.home-details-searching-container{
+.home-details-searching-container-mobile{
     justify-content: center;
     align-items: center;
     width: 95%;
     padding-left: 7vw;
 }
 
-.home-details-searching-container-2{
+.home-details-searching-container-2-mobile{
     display: flex;
     align-items: center;
 }
+
+/* ATTENTION */
+/* ATTENTION */
+/* ATTENTION */
 
 input::placeholder{
     font-family: 'Montserrat', sans-serif;
@@ -190,7 +194,12 @@ label{
     padding-right: 0.83vw;
 }
 
-.home-details-searching-params {
+/* ATTENTION */
+/* ATTENTION */
+/* ATTENTION */
+/* ATTENTION */
+
+.home-details-searching-params-mobile{
     width: 90%;
     position: relative;
     display: inline-block;
@@ -198,19 +207,19 @@ label{
     align-items: center;
 }
 
-.input-params{
+.input-params-mobile{
     width: 68.7vw;
     height: 1.5vw;
     padding: 0.69vw 3vw;
 }
 
-.home-details-searching-params img {
+.home-details-searching-params-mobile img {
     position: absolute;
     left: 1vw;
     transform: translateY(70%);
 }
 
-.home-details-searching-text{
+.home-details-searching-text-mobile{
     font-family: 'Montserrat', sans-serif;
     font-size: 0.97vw;
     font-weight: 500;
@@ -221,22 +230,22 @@ label{
     margin-bottom: 0.56vw;
 }
 
-.input-inside-diameter-from, .input-inside-diameter-to,
-.input-outside-diameter-from, .input-outside-diameter-to,
-.input-inside-searching-width-from, .input-inside-searching-width-to{
+.input-inside-diameter-from-mobile, .input-inside-diameter-to-mobile,
+.input-outside-diameter-from-mobile, .input-outside-diameter-to-mobile,
+.input-inside-searching-width-from-mobile, .input-inside-searching-width-to-mobile{
     width: 10vw;
     height: 1.5vw;
     padding: 0.69vw 0.83vw;
 }
 
-.home-details-searching-buttons-container {
+.home-details-searching-buttons-container-mobile{
     display: flex;
     justify-content: flex-end;
     margin-right: 10.9vw;
     padding: 3vw 0vw;
 }
 
-.home-details-clear-button {
+.home-details-clear-button-mobile{
     font-family: 'Poppins', sans-serif;
     font-size: 1.67vw;
     font-weight: 400;
@@ -251,12 +260,12 @@ label{
     transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
-.home-details-clear-button:hover {
+.home-details-clear-button-mobile:hover{
     color: #fff; 
     background-color: #333; 
 }
 
-.home-details-show-button {
+.home-details-show-button-mobile{
     font-family: 'Poppins', sans-serif;
     font-size: 1.67vw;
     font-weight: 400;
@@ -270,7 +279,7 @@ label{
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.home-details-show-button:hover {
+.home-details-show-button-mobile:hover{
     color: #fff; 
     background-color: #333; 
     border-color: #fff; 
@@ -278,12 +287,12 @@ label{
 
 /* 3rd section */
 
-.home-catalog-section{
+.home-catalog-section-mobile{
     background-color: #343336;
     padding: 4vw 4.44vw 7vw 4.44vw;
 }
 
-.home-catalog-heading{
+.home-catalog-heading-mobile{
     font-family: 'Bicubik', sans-serif;
     font-size: 2.22vw;
     font-weight: 400;
@@ -293,7 +302,7 @@ label{
     color: #fff;
 }
 
-.home-catalog-heading-text{
+.home-catalog-heading-text-mobile{
     font-family: "Poppins", sans-serif;
     font-size: 1.67vw;
     font-weight: 400;
@@ -304,13 +313,13 @@ label{
     white-space: pre-line;
 }
 
-.home-catalog-grid{
+.home-catalog-grid-mobile{
     display: grid;
     grid-template-columns: 49% 24% 24%;
     gap: 1vw;
 }
 
-.home-catalog-grid > div > p{
+.home-catalog-grid-mobile > div > p{
     font-family: 'Bicubik', sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
@@ -320,34 +329,34 @@ label{
     color: #EDEDED;
 }
 
-.home-catalog-grid-bearings-background{
+.home-catalog-grid-bearings-background-mobile{
     background-color: #525150;
     height: 15vw;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-grid-pins-background{
+.home-catalog-grid-pins-background-mobile{
     background-color: #797674;   
     height: 15vw;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-grid-oil-background{
+.home-catalog-grid-oil-background-mobile{
     background-color: #97918C;
     height: 15vw;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-grid-2{
+.home-catalog-grid-2-mobile{
     display: grid;
     grid-template-columns: 24% 24% 49%;
     gap: 1vw;
 }
 
-.home-catalog-grid-2 > div > p{
+.home-catalog-grid-2-mobile > div > p{
     font-family: 'Bicubik', sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
@@ -357,49 +366,49 @@ label{
     color: #EDEDED;
 }
 
-.home-catalog-grid-lubricant-background{
+.home-catalog-grid-lubricant-background-mobile{
     background-color: #797674;
     height: 15vw;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-grid-instrument-background{
+.home-catalog-grid-instrument-background-mobile{
     background-color: #797674;   
     height: 15vw;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-grid-key-background{
+.home-catalog-grid-key-background-mobile{
     background-color: #525150;
     height: 15vw;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-bearing-1{
+.home-catalog-bearing-1-mobile{
     position: absolute;
     top: 11%;
     left: 35%;
     width: 12vw;
 }
 
-.home-catalog-bearing-2{
+.home-catalog-bearing-2-mobile{
     position: absolute;
     top: 15%;
     left: 30%;
     width: 10vw;
 }
 
-.home-catalog-bearing-3{
+.home-catalog-bearing-3-mobile{
     position: absolute;
     top: 15%;
     left: 30%;
     width: 10vw;
 }
 
-.home-catalog-watch-all-button {
+.home-catalog-watch-all-button-mobile{
     margin-left: 84%;
     padding: 3vw 0vw;
     font-family: 'Poppins', sans-serif;
@@ -416,7 +425,7 @@ label{
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.home-catalog-watch-all-button:hover {
+.home-catalog-watch-all-button-mobile:hover{
     color: #333; 
     background-color: #fff; 
     border-color: #333; 
@@ -424,7 +433,7 @@ label{
 
 /* 4th section */
 
-.home-delivery-section{
+.home-delivery-section-mobile{
     background-color: #EDEDED;
     padding: 6vw 4.44vw;
     display: grid;
@@ -432,7 +441,7 @@ label{
     gap: 4vw;
 }
 
-.home-delivery-head{
+.home-delivery-head-mobile{
     font-family: 'Bicubik', sans-serif;
     font-size: 2.22vw;
     font-weight: 400;
@@ -442,7 +451,7 @@ label{
     color: black;
 }
 
-.arrow-down{
+.arrow-down-mobile{
     width: 8vw;
     height: 8vw;
     justify-self: end;
@@ -450,7 +459,7 @@ label{
     transition: transform 0.3s ease; 
 }
   
-.arrow-down-anim{
+.arrow-down-anim-mobile{
     width: 8vw;
     height: 8vw;
     justify-self: end;
@@ -458,7 +467,7 @@ label{
     transition: transform 0.3s ease; 
 }
 
-.home-delivery-drop-menu-1{
+.home-delivery-drop-menu-1-mobile{
     display: flex;
     cursor: pointer;
     justify-content: space-between;
@@ -467,7 +476,7 @@ label{
     padding: 1vw 0;
 }
 
-.home-delivery-drop-menu-2{
+.home-delivery-drop-menu-2-mobile{
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -475,7 +484,7 @@ label{
     width: 45vw;
 }
 
-.home-delivery-drop-menu-head-text-1{
+.home-delivery-drop-menu-head-text-1-mobile{
     font-family: "Poppins", sans-serif;
     font-size: 2vw;
     font-weight: 400;
@@ -485,7 +494,7 @@ label{
     white-space: pre-line; 
 }
 
-.home-delivery-drop-menu-head-text-2{
+.home-delivery-drop-menu-head-text-2-mobile{
     font-family: "Poppins", sans-serif;
     font-size: 2vw;
     font-weight: 400;
@@ -496,7 +505,7 @@ label{
     margin-top: 3vw; 
 }
 
-.home-delivery-drop-menu-text-1{
+.home-delivery-drop-menu-text-1-mobile{
     font-family: "Poppins", sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
@@ -506,7 +515,7 @@ label{
     white-space: pre-line;
 }
 
-.home-delivery-drop-menu-text-2{
+.home-delivery-drop-menu-text-2-mobile{
     font-family: "Poppins", sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
@@ -519,12 +528,12 @@ label{
 
 /* 5th section */
 
-.home-contacts-section{
+.home-contacts-section-mobile{
     background-color: #525150;
     padding: 5vw 4.44vw;
 }
 
-.home-contacts-head{
+.home-contacts-head-mobile{
     font-family: 'Bicubik', sans-serif;
     font-size: 2.22vw;
     font-weight: 400;
@@ -534,31 +543,31 @@ label{
     color: white;
 }
 
-.home-contacts-container {
+.home-contacts-container-mobile{
     display: flex;
     flex-wrap: wrap;
 }
 
-.home-contacts-container > div {
+.home-contacts-container-mobile > div {
     margin-right: 5vw;  
 }
 
-.home-contacts-container > div:last-child {
+.home-contacts-container-mobile > div:last-child {
     margin-right: 0; 
 }
 
-.home-contacts-container > div{
+.home-contacts-container-mobile > div{
     display: flex;
     align-items: center;
 }
 
-.home-contacts-container > div > img{
+.home-contacts-container-mobile > div > img{
     width: 1.5vw;
     height: 1.5vw;
     padding-right: 1vw;
 }
 
-.home-contacts-container > div > p{
+.home-contacts-container-mobile > div > p{
     font-family: "Poppins", sans-serif;
     font-size: 1.5vw;
     font-weight: 400;
@@ -569,35 +578,35 @@ label{
     color: #fff;
 }
 
-.home-contacts-container-1,
-.home-contacts-container-2,
-.home-contacts-container-3{
+.home-contacts-container-1-mobile,
+.home-contacts-container-2-mobile,
+.home-contacts-container-3-mobile{
     margin-bottom: -2vw;
 }
-.home-contacts-container-4,
-.home-contacts-container-5{
+.home-contacts-container-4-mobile,
+.home-contacts-container-5-mobile{
     margin-top: 0.3vw;
     padding-bottom: 2vw;
 }
 
-.map-container {
+.map-container-mobile{
     width: 100%; 
     height: 20vw;
 }
   
-.map-container iframe {
+.map-container-mobile iframe{
     width: 100%; 
     height: 20vw;
 }
 
 /* 5th section */
 
-.home-form-sending-section{
+.home-form-sending-section-mobile{
     background-color: #EDEDED;
     padding: 5vw 4.44vw 1vw 4.44vw;
 }
 
-.home-form-sending-head{
+.home-form-sending-head-mobile{
     font-family: 'Bicubik', sans-serif;
     font-size: 2.22vw;
     font-weight: 400;
@@ -606,41 +615,41 @@ label{
     text-align: left;
 }
 
-.home-form{
+.home-form-mobile{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.home-form-1{
+.home-form-1-mobile{
     display: flex;
     padding: 1vw;
     position: relative;
 }
 
-.input-mail{
+.input-mail-mobile{
     height: 1.5vw;
     padding: 0.69vw 3vw;
     width: 27vw;
 }
 
-.edit-svg-input-mail{
+.edit-svg-input-mail-mobile{
     position: absolute;
     top:62%;
     left: 3%;
 }
 
-.input-telephone{
+.input-telephone-mobile{
     height: 1.5vw;
     padding: 0.69vw 1vw;
     width: 27vw;
 }
 
-.home-form-2{
+.home-form-2-mobile{
     position: relative;
 }
 
-.input-message {
+.input-message-mobile {
     width: 61vw;
     padding: 1vw;
     padding-bottom: 10vw;
@@ -657,7 +666,7 @@ label{
     letter-spacing: -0.011em;
 }
 
-.input-message::placeholder{
+.input-message-mobile::placeholder{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.11vw;
     font-weight: 400;
@@ -667,7 +676,7 @@ label{
     color: #A7A7A7;
 }
 
-.char-count {
+.char-count-mobile{
     position: absolute;
     top: 23%;
     right: 2vw;
@@ -679,23 +688,23 @@ label{
     text-align: right;
 }
 
-.home-form-3{
+.home-form-3-mobile{
     position: relative;
 }
 
-.input-captcha{
+.input-captcha-mobile{
     width: 57vw;
     height: 1.5vw;
     padding: 0.69vw 3vw;
 }
 
-.edit-svg-input-captcha{
+.edit-svg-input-captcha-mobile{
     position: absolute;
     top:67%;
     left: 2%;
 }
 
-.home-details-searching-submit-button{
+.home-details-searching-submit-button-mobile{
     font-family: 'Poppins', sans-serif;
     font-size: 1.67vw;
     font-weight: 400;
@@ -712,12 +721,12 @@ label{
     margin-left: 52vw;
 }
 
-.home-details-searching-submit-button:hover {
+.home-details-searching-submit-button-mobile:hover{
     color: #fff; 
     background-color: #333; 
 }
 
-.home-details-searching-button-container{
+.home-details-searching-button-container-mobile{
     padding: 4vw 0;
     margin: 0;
 }

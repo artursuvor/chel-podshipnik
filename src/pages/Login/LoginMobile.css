@@ -1,21 +1,21 @@
-.login-page{
+.login-page-mobile{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #EDEDED;
 }
 
-.login-page-head{
+.login-page-head-mobile{
     font-family: 'Bicubik', sans-serif;
     font-size: 2.5vw;
     font-weight: 400;
 }
 
-.login-page-input-container{
+.login-page-input-container-mobile{
     padding-bottom: 2vw;
 }
 
-.login-page-input-text{
+.login-page-input-text-mobile{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.11vw;
     font-weight: 400;
@@ -25,7 +25,7 @@
     color: #A7A7A7;
 }
 
-.login-page-input-text{
+.login-page-input-text-mobile{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.11vw;
     font-weight: 400;
@@ -35,23 +35,23 @@
     color: #A7A7A7;
 }
 
-.login-page-input{
+.login-page-input-mobile{
     padding: 1vw;
     padding-right: 35vw;
 }
 
-.login-page-button-container{
+.login-page-button-container-mobile{
     margin-right: 0.7vw;
     width: 50%;
 }
 
-.login-page-fgt-pass-btn-cont{
+.login-page-fgt-pass-btn-cont-mobile{
     padding-top: 1vw;
     padding-bottom: 4vw;
     transform: translateX(-0.2%);
 }
 
-.login-page-fgt-pass-btn{
+.login-page-fgt-pass-btn-mobile{
     background-color: transparent;
     border: none;
     color: black;
@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 
-.login-page-aut-btn{
+.login-page-aut-btn-mobile{
     padding: 1vw 0vw;
     font-family: 'Poppins', sans-serif;
     font-size: 1.67vw;
@@ -79,19 +79,19 @@
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.login-page-aut-btn:hover{
+.login-page-aut-btn-mobile:hover{
     color: #fff; 
     border-color: #333;
     background-color: #333; 
 }
 
-.login-page-reg-btn-cont{
+.login-page-reg-btn-cont-mobile{
     padding: 1.5vw 0vw 6vw 0vw;
     align-items: center;
     text-align: center;
 }
 
-.login-page-reg-btn{
+.login-page-reg-btn-mobile{
     background-color: transparent;
     border: none;
     color: black;

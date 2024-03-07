@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { Product } from '../../pages/Catalog/Data.tsx';
-import './Header.css'
+import './HeaderMobile.css'
 
-const Header = () => {
+const HeaderMobile = () => {
   const [isSticky, setSticky] = useState(false);
   const [isCartVisible, setCartVisible] = useState(false);
   const [sliderValue, setSliderValue] = useState(0);
@@ -109,70 +109,70 @@ const Header = () => {
     console.log('1');
   };
   return (
-    <header className={isHomePage ? (isSticky ? 'sticky-header' : '') : 'header-not-main'}>
+    <header className={isHomePage ? (isSticky ? 'sticky-header-mobile' : '') : 'header-not-main-mobile'}>
       <img 
         src='./img/main-logo.png' 
         alt='header-main-logo' 
-        className='header-main-logo' 
+        className='header-main-logo-mobile' 
         onClick={() => window.location.href = '/'}
       />
-      <div className='header-right-side'>
-        <div className={isHomePage ? "header-contact-info" : "header-contact-info-not-main"}>
+      <div className='header-right-side-mobile'>
+        <div className={isHomePage ? "header-contact-info-mobile" : "header-contact-info-not-main-mobile"}>
             <a href="tel:+73517772520">8 (351) 777-25-20</a><span>, </span>
             <a href="tel:+73517772520">777-25-20</a>
         </div>
-        <div className='header-shopping-cart-cont'>
+        <div className='header-shopping-cart-cont-mobile'>
           <img 
             src='./img/shopping-cart.png' 
             alt='header-shopping-cart-svg' 
-            className='header-shopping-cart-svg'
+            className='header-shopping-cart-svg-mobile'
             onClick={toggleCartVisibility}
           />
           {isCartVisible && (
-            <div className='header-shopping-cart'>
+            <div className='header-shopping-cart-mobile'>
               <img 
                 src='/img/close-btn.svg' 
                 alt='shop-cart-close-btn' 
-                className='header-shopping-cart-close-btn' 
+                className='header-shopping-cart-close-btn-mobile' 
                 onClick={toggleCartVisibility}
               />
-              <p className='header-shopping-cart-head'>КОРЗИНА</p>
-              <p className='header-shopping-cart-count-text'>В вашей корзине {sampleProductsToAddToCart.length} товаров</p>
-              <div className='header-shopping-cart-grid-container'>
+              <p className='header-shopping-cart-head-mobile'>КОРЗИНА</p>
+              <p className='header-shopping-cart-count-text-mobile'>В вашей корзине {sampleProductsToAddToCart.length} товаров</p>
+              <div className='header-shopping-cart-grid-container-mobile'>
                 {sampleProductsToAddToCart.map((sampleProduct) => (
-                  <div key={sampleProduct.article} className="cart-item">
-                    <div className='sc-img-and-description'>
+                  <div key={sampleProduct.article} className="cart-item-mobile">
+                    <div className='sc-img-and-description-mobile'>
                       <img src={sampleProduct.img} alt={sampleProduct.name} />
-                      <div className='sc-description'>
+                      <div className='sc-description-mobile'>
                         <p>{sampleProduct.name}</p>
                         <p>{sampleProduct.brandName}</p>
                         <p><span>Размеры: </span>{sampleProduct.sizes}</p>
                         <p><span>Арт.: </span>{sampleProduct.article}</p>
                       </div>
                     </div>
-                    <div className="sc-quantity-controls">
+                    <div className="sc-quantity-controls-mobile">
                       <p>{sampleProduct.pricePerUnit}</p>
-                      <div className='sc-quantity-controls-buttons'>
+                      <div className='sc-quantity-controls-buttons-mobile'>
                         <button onClick={() => handleDecreaseQuantity(sampleProduct.article)}>-</button>
                         <p>{getCartItemQuantity(sampleProduct.article)}</p>
                         <button onClick={() => handleIncreaseQuantity(sampleProduct.article)}>+</button>
                       </div>
                     </div>
-                    <div className='sc-delete-btn-container'>
+                    <div className='sc-delete-btn-container-mobile'>
                       <img src='/img/trash.svg' alt='trash' />
                       <button onClick={() => removeFromCart(sampleProduct)}>Удалить</button>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className='sc-continue-order-button-container'>
+              <div className='sc-continue-order-button-container-mobile'>
                 <button 
                   onClick={toggleCartVisibility} 
-                  className='continue-order-btn'
+                  className='continue-order-btn-mobile'
                 >
                   Продолжить покупки
                 </button>
-                <button className='checkout-btn'>Оформить заказ</button>
+                <button className='checkout-btn-mobile'>Оформить заказ</button>
               </div>
             </div>
           )}
@@ -181,7 +181,7 @@ const Header = () => {
           <img 
             src={isAccPage || isRegPage ? '/img/user-b.png' : '/img/user.png'}
             alt='header-user-svg' 
-            className='header-user-svg'
+            className='header-user-svg-mobile'
           />
         </Link>
       </div>
@@ -189,4 +189,4 @@ const Header = () => {
   );
 }
 
-export default Header;
+export default HeaderMobile;

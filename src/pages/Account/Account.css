@@ -1,0 +1,154 @@
+.account-page{
+    padding: 1vw 4.44vw;
+    background-color: #EDEDED;
+}
+
+.account-page-head{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+
+.account-page-btn-cont{
+    padding: 2vw 0vw;
+}
+
+.account-page-btn-cont > button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    position: relative; 
+    padding: 0;
+    padding-bottom: 0.3vw;
+}
+
+.account-page-btn-cont > button:last-child{
+    margin-left: 5vw;
+}
+
+.account-page-btn-cont > button.active::before {
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 1px;
+    background-color: black; 
+}
+
+.account-page-input-container{
+    padding: 2vw 0vw;
+    width: 60%;
+}
+
+.account-page-input-container-2 > label{
+    padding-right: 13vw;
+}
+
+.account-page-input-container-p-text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.97vw;
+    font-weight: 500;
+    line-height: 1.67vw;
+    letter-spacing: -0.011em;
+    color: #7E7E7E;
+    text-align: left;
+    margin-bottom: 0.56vw;
+}
+
+.account-page-input-container-2 > label > input{
+    padding: 0.5vw 0vw 0.5vw 1vw;
+    width: 170%;
+}
+
+.account-page-input-container-2{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2vw;
+}
+
+.account-page-last-input > input{
+    padding: 0.5vw 0vw 0.5vw 1vw;
+    width: 93%;
+}
+
+.account-page-order-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vw;
+}
+
+.account-page-order-number-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.account-page-order-assemble {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: black; 
+}
+  
+.account-page-order-arrived {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #4D702B; 
+}
+  
+.account-page-order-canceled {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    margin-right: 8.5vw;
+    color: #EB5757; 
+}
+
+.account-page-order-delivery-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.account-page-order-details-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+    cursor: pointer;
+}
+
+.account-page-exit-btn-cont{
+    cursor: pointer;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    padding-top:1vw ;
+}
+
+.account-page-exit-btn{
+    width: 1.2vw;
+    height: auto;
+    padding: 0.5vw 0.5vw 0.5vw 0vw;
+}
+
+.account-page-exit-btn-cont > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4vw;
+    font-weight: 400;
+    letter-spacing: 0em;
+}

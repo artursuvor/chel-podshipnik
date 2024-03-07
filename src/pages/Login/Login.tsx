@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css'
 
 interface LoginProps {
@@ -47,9 +48,19 @@ const Login: React.FC<LoginProps> = ({ onLogin, onRegister, onForgotPassword }) 
             />
         </label>
       </div>
-      {showRegistration ? '' : <button className='login-page-fgt-pass-btn' onClick={onForgotPassword}>Напомнить пароль</button>}
-      <button className='login-page-aut-btn' onClick={handleLogin}>{showRegistration ? `Зарегистрироваться` : `Авторизоваться`}</button>
-      {showRegistration ? '' : <button className='login-page-reg-btn' onClick={handleToggleRegistration}>Зарегистрироваться</button>}
+      <div className='login-page-button-container'>
+        <div className='login-page-fgt-pass-btn-cont'>
+          {showRegistration ? '' : <button className='login-page-fgt-pass-btn' onClick={onForgotPassword}>Напомнить пароль</button>}
+        </div>
+        <div>
+          <Link to={`/account`}>
+            <button className='login-page-aut-btn' onClick={handleLogin}>{showRegistration ? `Зарегистрироваться` : `Авторизоваться`}</button>
+          </Link>
+        </div>
+        <div className='login-page-reg-btn-cont'>
+          {showRegistration ? '' : <button className='login-page-reg-btn' onClick={handleToggleRegistration}>Зарегистрироваться</button>}
+        </div>
+      </div>
     </div>
   );
 };
