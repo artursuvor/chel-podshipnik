@@ -16,7 +16,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #97918C;
-  padding: 2.22vh 4.4vw 4.44vh 4.4vw;
+  height: 80px;
+  padding: 0px 4.4vw 0px 4.4vw;
   transition: background-color 0.3s ease; 
 }
 
@@ -38,7 +39,7 @@ header {
 }
 
 .header-main-logo-mobile{
-  width: 15vw;
+  width: 120px;
   height: auto;
   cursor: pointer;
 }
@@ -102,9 +103,9 @@ header {
 }
 
 .header-shopping-cart-svg-mobile{
-  margin-left: 2.33vw;
+  margin-left: 24px;
   padding: 1vw;
-  width: 2vw;
+  width: 32px;
   cursor: pointer;
   transition: background-color 0.3s ease; 
   border-radius: 50%; 
@@ -129,7 +130,7 @@ header {
 .header-user-svg-mobile {
   position: relative;
   padding: 1vw;
-  width: 2vw;
+  width: 32px;
   cursor: pointer;
   transition: background-color 0.3s ease; 
   border-radius: 50%; 
@@ -155,9 +156,9 @@ header {
 .header-shopping-cart-grid-container-mobile{
   display: grid;
   grid-template-columns: 1fr;
-  max-height: 20.4vw; 
+  max-height: 373px; 
   overflow: auto; 
-  padding-right: 1vw;
+  padding: 0px 16px ;
 }
 
 /* Кастомизация полосы прокрутки */
@@ -195,38 +196,38 @@ header {
   align-items: center;
   text-align: center;
   justify-content: end;
-  padding:0vw 1vw 0vw 1vw;
+  padding:0vw 16px 0vw 16px;
 }
 
 .sc-quantity-controls-mobile p{
   font-family: "Poppins", sans-serif;
-  font-size: 1.5vw;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0em;
-  padding: 1vw;
+  padding: 10px;
 }
 
 .sc-quantity-controls-buttons-mobile{
   display: flex;
   align-items: center;
   border: 1px solid black;
-  padding: 0 0.5vw;
-  height: 3vw;
+  padding: 0 5px;
+  height: 30px;
 }
 
 .sc-quantity-controls-buttons-mobile p{
   font-family: "Poppins", sans-serif;
-  font-size: 1.67vw;
+  font-size: 18px;
   font-weight: 400;
   line-height: 2.5vw;
   letter-spacing: 0em;
-  width: 1vw;
-  padding: 1vw;
+  width: 10px;
+  padding: 10px;
 }
 
 .sc-quantity-controls-buttons-mobile button{
   font-family: "Poppins", sans-serif;
-  font-size: 1.67vw;
+  font-size: 18px;
   font-weight: 400;
   line-height: 2.5vw;
   letter-spacing: 0em;
@@ -237,28 +238,27 @@ header {
 
 .sc-img-and-description-mobile{
   display: flex;
-  padding: 1vw 0vw 0vw 1vw;
   align-items: center;
 }
 
 .sc-img-and-description-mobile > img{
-  width: 12vw;
-  height: 12vw;
-  padding-left: 1vw;
+  width: 86px;
+  height: 86px;
+  padding: 16px 4px 0px 16px;
 }
 
 .sc-description-mobile > p{
   font-family: "Poppins", sans-serif;
-  font-size: 1.3vw;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0em;
-  padding-left: 1vw;  
+  padding-left: 12px;  
   height: 1.3vw;
 }
 
 .sc-description-mobile span{
   font-family: "Poppins", sans-serif;
-  font-size: 1.3vw;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0em;
   color: #797674;
@@ -266,21 +266,21 @@ header {
 
 .sc-delete-btn-container-mobile{
   position: absolute;
-  top: 1vw;
-  right: 1vw;
+  top: 5px;
+  right: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
 .sc-delete-btn-container-mobile img{
-  width: 2vw;
-  height: 2vw;
+  width: 16px;
+  height: 16px;
 }
 
 .sc-delete-btn-container-mobile button{
   font-family: "Montserrat", sans-serif;
-  font-size: 1vw;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0em;
   border: none;
@@ -291,28 +291,33 @@ header {
 .sc-continue-order-button-container-mobile{
   display: flex;
   align-items: center;
-  justify-content: end;
-  padding: 1.5vw 0vw 1vw 4vw
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px 0 16px;
 }
 
 .continue-order-btn-mobile{
   font-family: "Poppins", sans-serif;
-  font-size: 1.3vw;
+  font-size: 18px;
   font-weight: 400;
   background-color: transparent;
-  padding: 1vw;
-  border: none;
+  width: 100%;
+  border: 1px solid black;
   cursor: pointer;
+  padding: 10px 0;
+  margin-top: 92px;
 }
 
 .checkout-btn-mobile{
+  margin-top: 16px;
+  padding: 10px 0;
   font-family: "Poppins", sans-serif;
-  font-size: 1.3vw;
+  font-size: 18px;
   font-weight: 400;
   background-color: #FF6421;
   color: white;
-  padding: 1vw 2vw 1vw 2vw;
-  border: none;
+  width: 100%;
+  border: 1px solid #FF6421;
   cursor: pointer;
 }
 
@@ -321,35 +326,30 @@ header {
 }
 
 .header-shopping-cart-mobile{
-  background-color: white;
-  padding: 1vw 2vw 4vw 2vw;
+  background-color: #EDEDED;
   right: 0;
-  top: 1vw;
-  position: absolute;
-  width: 40vw;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   z-index: 1050;
-}
-
-.header-shopping-cart-close-btn-mobile{
-  position: absolute;
-  right: 1vw;
-  width: 2vw;
 }
 
 .header-shopping-cart-head-mobile{
   font-family: 'Bicubik', sans-serif;
-  font-size: 1.5vw;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 0.5vw;
+  padding-left: 16px;
 }
 
 .header-shopping-cart-count-text-mobile{
   font-family: "Poppins", sans-serif;
-  font-size: 1vw;
+  font-size: 18px;
   font-weight: 400;
   text-align: left;
   color:#525150;
   margin-top: 1vw;
+  padding-left: 16px;
 }

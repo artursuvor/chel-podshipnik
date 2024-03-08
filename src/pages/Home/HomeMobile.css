@@ -1,27 +1,27 @@
 @import url('https://fonts.cdnfonts.com/css/bicubik');
 
 /* 1st section */
-.home-main-menu-section-size-mobile{ 
-    width: 46.25vw;
-    height: 43.5vw;
-    background-color: #EDEDED;
-    grid-area: size; 
+.home-main-menu-section-mobile{
+    background-color: #97918C;
     position: relative;
-    cursor: pointer;
+    padding: 16px;
 }
 
 .home-main-menu-section-size-text-1-mobile{
-    position: absolute;
     white-space: pre-line;
-    left: 5%;
-    top: -2%;
     font-family: 'Bicubik', sans-serif;
-    font-size: 3.5vw;
+    font-size: 32px;
     font-weight: 400;
-    line-height: 4.5vw;
     letter-spacing: 0em;
     text-align: left;
-    z-index: 10;
+}
+
+.home-main-menu-section-size-mobile{ 
+    background-color: #EDEDED;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    cursor: pointer;
 }
 
 .home-main-menu-section-size-text-2-mobile{
@@ -29,7 +29,7 @@
     left: 5%;
     bottom: 1%;
     font-family: 'Bicubik', sans-serif;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0em;
     text-align: left;
@@ -37,48 +37,48 @@
 
 .section-size-ph-mobile{
     position: absolute;
-    width: 22vw;
-    right: 0;
-    bottom: 5%;
+    width: 170px;
+    right: 30%;
+    top: 0;
 }
 
 .home-main-menu-section-catalog-mobile{
-    width: 42.1vw;
-    height: 25vw;
+    width: 100%;
+    height: 150px;
     background-color: #797674; 
-    grid-area: catalog;
     position: relative;
     cursor: pointer; 
 }
+
 .home-main-menu-section-catalog-ph-1-mobile{
     position: absolute;
-    width: 8vw;
-    top: 40%;
-    left: 25%;
+    width: 145px;
+    bottom: 0;
+    right: 0;
 }
 .home-main-menu-section-catalog-ph-2-mobile{
     position: absolute;
-    width: 30vw;
+    width: 244px;
     bottom: 0%;
     right: 0%;
 }
 
 .home-main-menu-section-delivery-mobile{ 
-    width: 20vw;
-    height: 16.3vw;
+    width: 100%;
+    height: 180px;
     background-color: #525150;
-    grid-area: delivery; 
     position: relative;
     cursor: pointer;
 }
 .home-main-menu-section-contacts-mobile{ 
-    width: 20vw;
-    height: 16.3vw;
+    width: 100%;
+    height: 180px;
     background-color: #343336;
-    grid-area: contacts; 
     position: relative;
     cursor: pointer;
 }
+
+
 
 .button-circle-mobile{
     position: absolute;
@@ -87,29 +87,34 @@
     top: 1%;
 }
 
+.home-main-cont{
+    padding: 4px 0;
+}
+.home-main-cont-2{
+    width: 100%;
+    padding-top: 4px;
+    padding-right: 4px;
+}
+
+.home-main-cont-3{
+    width: 100%;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.home-main-flex-cont{
+    display: flex;
+}
 .home-main-menu-section-text-2-mobile{
     position: absolute;
     left: 5%;
     bottom: 1%;
     font-family: 'Bicubik', sans-serif;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0em;
     color: #EDEDED;
     text-align: left;
-}
-
-.home-main-menu-section-mobile{
-    display: grid;
-    grid-template-areas:
-      'size size catalog catalog'
-      'size size catalog catalog'
-      'size size delivery contacts'
-      'size size delivery contacts';
-    flex-wrap: wrap;
-    gap: 2.15vw;
-    background-color: #97918C;
-    padding: 0vw 4.4vw 8vw 4.4vw;
 }
 
 .home-main-menu-section-size-mobile .section-size-ph-mobile{
@@ -138,38 +143,44 @@
 /* 2nd section */
 
 .home-details-searching-mobile{
-    padding: 4vw 4.44vw;
+    padding: 16px;
     background-color: #EDEDED;
 }
 
 .home-details-searching-head-mobile{
     font-family: 'Bicubik', sans-serif;
-    font-size: 2.22vw;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 2.78vw;
+    white-space: pre-line;
     letter-spacing: 0em;
     text-align: left;
 }
 
 .home-details-searching-container-mobile{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
-    padding-left: 7vw;
 }
 
 .home-details-searching-container-2-mobile{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: left;
+    white-space: nowrap;
+}
+
+.home-details-searching-container-2-mobile > div{
+    padding-bottom: 12px;
 }
 
 /* ATTENTION */
 /* ATTENTION */
 /* ATTENTION */
 
-input::placeholder{
+.input-mobile > input::placeholder{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.11vw;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.67vw;
     letter-spacing: -0.011em;
@@ -177,21 +188,22 @@ input::placeholder{
     color: #A7A7A7;
 }
 
-input{
+.input-mobile > input{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.11vw;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.67vw;
     letter-spacing: -0.011em;
+    padding-left: 8px;
 }
 
-input{
+.input-mobile > input{
     border: 1px solid #E0E0E0;
     outline: none;
 }
 
-label{
-    padding-right: 0.83vw;
+.input-mobile{
+    padding-right: 8px;
 }
 
 /* ATTENTION */
@@ -200,60 +212,61 @@ label{
 /* ATTENTION */
 
 .home-details-searching-params-mobile{
-    width: 90%;
+    width: 100%;
     position: relative;
     display: inline-block;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    padding-bottom: 24px;
 }
 
 .input-params-mobile{
-    width: 68.7vw;
-    height: 1.5vw;
-    padding: 0.69vw 3vw;
+    width: 98%;
+    height: 15px;
+    padding: 10px 0;
 }
 
 .home-details-searching-params-mobile img {
     position: absolute;
-    left: 1vw;
+    left: 10px;
     transform: translateY(70%);
 }
 
 .home-details-searching-text-mobile{
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.97vw;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.67vw;
     letter-spacing: -0.011em;
     color: #7E7E7E;
     text-align: left;
-    margin-bottom: 0.56vw;
 }
 
 .input-inside-diameter-from-mobile, .input-inside-diameter-to-mobile,
 .input-outside-diameter-from-mobile, .input-outside-diameter-to-mobile,
 .input-inside-searching-width-from-mobile, .input-inside-searching-width-to-mobile{
-    width: 10vw;
-    height: 1.5vw;
-    padding: 0.69vw 0.83vw;
+    width: 46%;
+    height: 15px;
+    padding: 10px 0;
 }
 
 .home-details-searching-buttons-container-mobile{
     display: flex;
-    justify-content: flex-end;
-    margin-right: 10.9vw;
-    padding: 3vw 0vw;
+    padding: 32px 0px;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+
 }
 
 .home-details-clear-button-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.67vw;
+    font-size: 18px;
     font-weight: 400;
     line-height: 2.5vw;
     letter-spacing: 0em;
-    padding: 0.5vw 1.5vw;
-    margin: 0vw 1vw;
-    text-align: left;
+    padding: 15px 35px;
+    text-align: center;
     border: none;
     background: none;
     cursor: pointer;
@@ -267,13 +280,14 @@ label{
 
 .home-details-show-button-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.67vw;
+    width: 100%;
+    font-size: 18px;
     font-weight: 400;
     line-height: 2.5vw;
     letter-spacing: 0em;
-    padding: 0.5vw 1.5vw;
-    text-align: left;
-    border: 2px solid black;
+    padding: 15px 35px;
+    text-align: center;
+    border: 1px solid black;
     background: none;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
@@ -289,14 +303,13 @@ label{
 
 .home-catalog-section-mobile{
     background-color: #343336;
-    padding: 4vw 4.44vw 7vw 4.44vw;
+    padding: 16px;
 }
 
 .home-catalog-heading-mobile{
     font-family: 'Bicubik', sans-serif;
-    font-size: 2.22vw;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 2.78vw;
     letter-spacing: 0em;
     text-align: left;
     color: #fff;
@@ -304,9 +317,8 @@ label{
 
 .home-catalog-heading-text-mobile{
     font-family: "Poppins", sans-serif;
-    font-size: 1.67vw;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 2.5vw;
     letter-spacing: 0em;
     text-align: left;
     color: #fff;
@@ -314,51 +326,53 @@ label{
 }
 
 .home-catalog-grid-mobile{
-    display: grid;
-    grid-template-columns: 49% 24% 24%;
-    gap: 1vw;
+    padding: 24px 0;
 }
 
-.home-catalog-grid-mobile > div > p{
+.home-catalog-grid-mobile p{
     font-family: 'Bicubik', sans-serif;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 2.78vw;
     letter-spacing: 0em;
     text-align: left;
     color: #EDEDED;
 }
 
+.home-cat-flex-1{
+    display: flex;
+}
+
 .home-catalog-grid-bearings-background-mobile{
     background-color: #525150;
-    height: 15vw;
+    width: 100%;
+    height: 160px;
     position: relative;
     cursor: pointer;
 }
-
+.home-catalog-grid-pins-mobile{
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+}
 .home-catalog-grid-pins-background-mobile{
-    background-color: #797674;   
-    height: 15vw;
+    background-color: #797674;  
+    width: 100%; 
+    height: 160px;
     position: relative;
     cursor: pointer;
 }
 
 .home-catalog-grid-oil-background-mobile{
     background-color: #97918C;
-    height: 15vw;
+    width: 100%;
+    height: 160px;
     position: relative;
     cursor: pointer;
 }
 
-.home-catalog-grid-2-mobile{
-    display: grid;
-    grid-template-columns: 24% 24% 49%;
-    gap: 1vw;
-}
-
 .home-catalog-grid-2-mobile > div > p{
     font-family: 'Bicubik', sans-serif;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 400;
     line-height: 2.78vw;
     letter-spacing: 0em;
@@ -368,21 +382,21 @@ label{
 
 .home-catalog-grid-lubricant-background-mobile{
     background-color: #797674;
-    height: 15vw;
+    height: 160px;
     position: relative;
     cursor: pointer;
 }
 
 .home-catalog-grid-instrument-background-mobile{
     background-color: #797674;   
-    height: 15vw;
+    height: 160px;
     position: relative;
     cursor: pointer;
 }
 
 .home-catalog-grid-key-background-mobile{
     background-color: #525150;
-    height: 15vw;
+    height: 160px;
     position: relative;
     cursor: pointer;
 }
@@ -409,26 +423,20 @@ label{
 }
 
 .home-catalog-watch-all-button-mobile{
-    margin-left: 84%;
-    padding: 3vw 0vw;
+    margin-left: 60%;
+    padding: 15px 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.67vw;
+    font-size: 18px;
     font-weight: 400;
     line-height: 2.5vw;
     letter-spacing: 0em;
-    padding: 0.5vw 1.5vw;
     text-align: left;
-    border: 2px solid white;
     color: white;
-    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.home-catalog-watch-all-button-mobile:hover{
-    color: #333; 
-    background-color: #fff; 
-    border-color: #333; 
 }
 
 /* 4th section */

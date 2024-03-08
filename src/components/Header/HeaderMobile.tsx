@@ -117,25 +117,19 @@ const HeaderMobile = () => {
         onClick={() => window.location.href = '/'}
       />
       <div className='header-right-side-mobile'>
-        <div className={isHomePage ? "header-contact-info-mobile" : "header-contact-info-not-main-mobile"}>
+        {/* <div className={isHomePage ? "header-contact-info-mobile" : "header-contact-info-not-main-mobile"}>
             <a href="tel:+73517772520">8 (351) 777-25-20</a><span>, </span>
             <a href="tel:+73517772520">777-25-20</a>
-        </div>
+        </div> */}
         <div className='header-shopping-cart-cont-mobile'>
           <img 
-            src='./img/shopping-cart.png' 
+            src='./img/shopping-cart-m.svg' 
             alt='header-shopping-cart-svg' 
             className='header-shopping-cart-svg-mobile'
             onClick={toggleCartVisibility}
           />
           {isCartVisible && (
             <div className='header-shopping-cart-mobile'>
-              <img 
-                src='/img/close-btn.svg' 
-                alt='shop-cart-close-btn' 
-                className='header-shopping-cart-close-btn-mobile' 
-                onClick={toggleCartVisibility}
-              />
               <p className='header-shopping-cart-head-mobile'>КОРЗИНА</p>
               <p className='header-shopping-cart-count-text-mobile'>В вашей корзине {sampleProductsToAddToCart.length} товаров</p>
               <div className='header-shopping-cart-grid-container-mobile'>
@@ -179,7 +173,7 @@ const HeaderMobile = () => {
         </div>
         <Link to={`/login`}>
           <img 
-            src={isAccPage || isRegPage ? '/img/user-b.png' : '/img/user.png'}
+            src={isAccPage || isRegPage ? '/img/user-b-m.svg' : '/img/user-m.svg'}
             alt='header-user-svg' 
             className='header-user-svg-mobile'
           />
