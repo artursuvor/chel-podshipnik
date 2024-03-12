@@ -102,6 +102,7 @@ const HomeMobile: React.FC = () => {
       console.error('Произошла ошибка:', error);
     }
   };
+
   return (
     <div className="home-container-mobile">
         <div className='home-main-menu-section-mobile'>
@@ -221,17 +222,17 @@ const HomeMobile: React.FC = () => {
             <button className='home-catalog-watch-all-button-mobile' onClick={() => window.location.href = '/catalog'}>
                 Смотреть все
             </button>
-            <div className='home-catalog-grid-mobile'>
+            <div className='home-catalog-grid-mobile-1'>
                 <div className='home-catalog-grid-bearings-mobile'>
                     <div className='home-catalog-grid-bearings-background-mobile'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
+                        <img src='/img/ph-grid-1.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
                     </div>
                     <p>ПОДШИПНИКИ</p>
                 </div>
                 <div className='home-cat-flex-1'>
                     <div className='home-catalog-grid-pins-mobile'>
                         <div className='home-catalog-grid-pins-background-mobile'>
-                            <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
+                            <img src='/img/ph-grid-2.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
                         </div>
                         <p>ШПИЛЬКИ</p>
                     </div>
@@ -243,28 +244,36 @@ const HomeMobile: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className='home-catalog-grid-2-mobile'>
+            <div className='home-catalog-grid-mobile-2'>
                 <div className='home-catalog-grid-key-mobile'>
                     <div className='home-catalog-grid-key-background-mobile'>
-                        <img src='/img/bearing.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
+                        <img src='/img/ph-grid-1.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
                     </div>
                     <p>ШПОНКИ И ШПОНОЧНАЯ СТАЛЬ</p>
                 </div>
                 <div className='home-cat-flex-1'>
                     <div className='home-catalog-grid-lubricant-mobile'>
                         <div className='home-catalog-grid-lubricant-background-mobile'>
-                            <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
+                            <img src='/img/ph-grid-2.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
                         </div>
-                        <p>СМАЗКИ И МАСЛА</p>
+                        <p>СМАЗКИ, МАСЛА</p>
                     </div>
                     <div className='home-catalog-grid-instrument-mobile'>
                         <div className='home-catalog-grid-instrument-background-mobile'>
-                            <img src='/img/bearing.png' alt='home-catalog-ph-2' className='home-catalog-bearing-2-mobile'/>
+                            <img src='/img/bearing-2.png' alt='home-catalog-ph-2' className='home-catalog-bearing-3-mobile'/>
                         </div>
                         <p>ИНСТРУМЕНТ</p>
                     </div>
                 </div>
             </div>
+            <div className='home-catalog-grid-bearings-background-mobile'>
+                <img src='/img/ph-grid-1.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
+            </div>
+            <p className='home-catalog-grid-text-mobile'>СТОПОРНЫЕ КОЛЬЦА</p>
+            <div className='home-catalog-grid-bearings-background-mobile'>
+                <img src='/img/ph-grid-1.png' alt='home-catalog-ph-1' className='home-catalog-bearing-1-mobile'/>
+            </div>
+            <p className='home-catalog-grid-text-mobile'>ПРЕСС-МАСЛЕНКИ</p>
         </div>
         <div className='home-delivery-section-mobile'>
             <div>
@@ -280,6 +289,21 @@ const HomeMobile: React.FC = () => {
                             className={menu1Visible ? `arrow-down-mobile` : `arrow-down-anim-mobile`}
                         />
                     </div>
+                    {menu1Visible && (
+                        <div className='home-delivery-drop-menu-text-1-mobile'>
+                            <p>
+                                Стоимость доставки не входит в цену товара и оплачивается по соответствующим тарифам транспортной компании или курьерской службы.
+                                <br/><br/>
+                                Стоимость доставки можно рассчитать на сайте выбранной вами транспортной компании или курьерской службы.
+                                До терминала транспортной компании по г. Челябинска мы доставляем товар бесплатно.
+                                <br/><br/>
+                                Срок доставки определяется графиком работы выбранной вами транспортной компании.
+                                <br/><br/>
+                                Доставка в другие регионы России осуществляется следующими транспортными компаниями:
+                            </p>
+                            <img src='./img/companies.png' alt='companies' className='companies'/>
+                        </div>
+                    )}
                     <div className='home-delivery-drop-menu-2-mobile' onClick={toggleMenu2}>
                         <p className='home-delivery-drop-menu-head-text-2-mobile'>Самовывоз</p>
                         <img 
@@ -288,37 +312,26 @@ const HomeMobile: React.FC = () => {
                             className={menu2Visible ? `arrow-down-mobile` : `arrow-down-anim-mobile`}
                         />
                     </div>
+                    {menu2Visible && (
+                        <div className='home-delivery-drop-menu-text-2-mobile'>
+                            <p>Самовывоз возможен в будни с 09–00 до 17–00, в субботу с 09–30 до 14–00.</p>
+                        </div>
+                    )}
                 </div>
             </div>
             <div>
-                {menu1Visible && (
-                    <div className='home-delivery-drop-menu-text-1-mobile'>
-                        <p>
-                            Стоимость доставки не входит в цену товара и оплачивается по соответствующим тарифам транспортной компании или курьерской службы.
-                            <br/><br/>
-                            Стоимость доставки можно рассчитать на сайте выбранной вами транспортной компании или курьерской службы.
-                            До терминала транспортной компании по г. Челябинска мы доставляем товар бесплатно.
-                            <br/><br/>
-                            Срок доставки определяется графиком работы выбранной вами транспортной компании.
-                            <br/><br/>
-                            Доставка в другие регионы России осуществляется следующими транспортными компаниями:
-                        </p>
-                        <img src='./img/companies.png' alt='companies'/>
-                    </div>
-                )}
-                {menu2Visible && (
-                    <div className='home-delivery-drop-menu-text-2-mobile'>
-                        <p>Самовывоз возможен в будни с 09–00 до 17–00, в субботу с 09–30 до 14–00.</p>
-                    </div>
-                )}
             </div>
         </div>
         <div className='home-contacts-section-mobile'>
             <p className='home-contacts-head-mobile'>КОНТАКТЫ</p>
             <div className='home-contacts-container-mobile'>
+                <div className='home-contacts-container-5-mobile'>
+                    <img src='./img/clock.png' alt='clock'/>
+                    <p>пн-пт 08:30 – 17:30<br/>сб 09:00 – 14:00 вс – выходной</p>
+                </div>
                 <div className='home-contacts-container-1-mobile'>
                     <img src='./img/phone.png' alt='phone'/>
-                    <p>8 (351) 256-97-97,  256-97-49</p>
+                    <p>8 (351) 256-97-97, 256-97-49</p>
                 </div>
                 <div className='home-contacts-container-2-mobile'>
                     <img src='./img/device-phone-mobile.png' alt='device-phone-mobile'/>
@@ -331,10 +344,6 @@ const HomeMobile: React.FC = () => {
                 <div className='home-contacts-container-4-mobile'>
                     <img src='./img/home.png' alt='home'/>
                     <p>454108 г. Челябинск ул. Харлова 14 к. 2 офис 205</p>
-                </div>
-                <div className='home-contacts-container-5-mobile'>
-                    <img src='./img/clock.png' alt='clock'/>
-                    <p>пн-пт 08:30 – 17:30 сб 09:00 – 14:00 вс – выходной</p>
                 </div>
             </div>    
             <div className='map-container-mobile'>
@@ -350,10 +359,10 @@ const HomeMobile: React.FC = () => {
         <div className='home-form-sending-section-mobile' onSubmit={handleSubmit}>
             <p className='home-form-sending-head-mobile'>СВЯЖИТЕСЬ С НАМИ</p>
             <form className='home-form-mobile'>
-                <div className='home-form-1-mobile'>
+                <div className='home-form-cont'>
                     <label className='input-mobile'>
                         <p className='home-details-searching-text-mobile'>Ваша почта</p>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-mail-mobile'/>
+                        {/* <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-mail-mobile'/> */}
                         <input 
                             placeholder='На эту почту придет ответ' 
                             className='input-mail-mobile'
@@ -361,16 +370,19 @@ const HomeMobile: React.FC = () => {
                             onChange={handleMailTextChange}
                         />
                     </label>
+                </div>
+                <div className='home-form-cont'>
                     <label className='input-mobile'>
                         <p className='home-details-searching-text-mobile'>Ваш телефон</p>
                         <input 
                             className='input-telephone-mobile'
+                            placeholder='+7 (xxx) xxx-xx-xx' 
                             value={telephoneText}
                             onChange={handleTelephoneTextChange}
                         />
                     </label>
                 </div>
-                <div className='home-form-2-mobile'>
+                <div className='home-form-cont'>
                     <p className='home-details-searching-text-mobile'>Ваше сообщение</p>
                     <label className='input-mobile'>
                         <textarea
@@ -383,11 +395,11 @@ const HomeMobile: React.FC = () => {
                         />
                         <span className='char-count-mobile'>{messageText.length}/225</span>
                     </label>
-                </div>
-                <div className='home-form-3-mobile'>
+                </div>  
+                <div className='home-form-cont-4'>
                     <p className='home-details-searching-text-mobile'>CAPTCHA</p>
                     <label className='input-mobile'>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-captcha-mobile'/>
+                        {/* <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-captcha-mobile'/> */}
                         <input 
                             placeholder='Напишите цифрой сколько будет' 
                             className='input-captcha-mobile'

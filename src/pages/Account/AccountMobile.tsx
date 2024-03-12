@@ -25,24 +25,22 @@ const AccountMobile: React.FC<AccountProps> = () => {
 
         {activeTab === 'contact' && (
             <div className='account-page-input-container-mobile'>
-                <div className='account-page-input-container-2-mobile'>
-                    <label>
-                        <p className='account-page-input-container-p-text-mobile'>Ваше имя</p>
-                        <input type="text" placeholder='ФИО'/>
-                    </label>
-                    <label>
-                        <p className='account-page-input-container-p-text-mobile'>Отображаемое имя</p>
-                        <input type="text" placeholder='loginname'/>
-                    </label>
-                    <label>
-                        <p className='account-page-input-container-p-text-mobile'>Номер телефона</p>
-                        <input type="tel" placeholder='+7 xxx xxx xxx'/>
-                    </label>
-                    <label>
-                        <p className='account-page-input-container-p-text-mobile'>Ваша Почта</p>
-                        <input type="email" placeholder='ama@adress.com'/>
-                    </label>
-                </div>
+                <label>
+                    <p className='account-page-input-container-p-text-mobile'>Ваше имя</p>
+                    <input type="text" placeholder='ФИО'/>
+                </label>
+                <label>
+                    <p className='account-page-input-container-p-text-mobile'>Отображаемое имя</p>
+                    <input type="text" placeholder='loginname'/>
+                </label>
+                <label>
+                    <p className='account-page-input-container-p-text-mobile'>Номер телефона</p>
+                    <input type="tel" placeholder='+7 xxx xxx xxx'/>
+                </label>
+                <label>
+                    <p className='account-page-input-container-p-text-mobile'>Ваша Почта</p>
+                    <input type="email" placeholder='ama@adress.com'/>
+                </label>
                 <label className='account-page-last-input-mobile'>
                     <p className='account-page-input-container-p-text-mobile'>Ваш адрес</p>
                     <input type="text" placeholder='Рыбинск, Ивановский проезд, 13к5'/>

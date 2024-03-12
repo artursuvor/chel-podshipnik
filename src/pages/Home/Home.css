@@ -590,7 +590,7 @@ label{
     height: 20vw;
 }
 
-/* 5th section */
+/* 6th section */
 
 .home-form-sending-section{
     background-color: #EDEDED;
@@ -625,6 +625,7 @@ label{
 }
 
 .edit-svg-input-mail{
+    width: 1vw;
     position: absolute;
     top:62%;
     left: 3%;
@@ -690,6 +691,7 @@ label{
 }
 
 .edit-svg-input-captcha{
+    width: 1vw;
     position: absolute;
     top:67%;
     left: 2%;

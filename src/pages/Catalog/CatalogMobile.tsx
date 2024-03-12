@@ -9,7 +9,7 @@ const CatalogMobile: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-          setStickyBtn(window.scrollY > 100);
+          setStickyBtn(window.scrollY > 50);
         };
     
         window.addEventListener('scroll', handleScroll);
@@ -176,17 +176,17 @@ const CatalogMobile: React.FC = () => {
             ))}
         </p>
         <p className='catalog-page-head-mobile'>КАТАЛОГ</p>
-        <p className='catalog-page-head-2-mobile'>
+        {/* <p className='catalog-page-head-2-mobile'>
             Более 15 лет мы работаем в сфере подшипников и комплектующих,<br/>
             обеспечивая их доставку до конечного потребителя.<br/>
             Мы предлагаем импортные подшипники, а так же отечественных производителей, любых модификаций.
-        </p>
+        </p> */}
         <div className='catalog-page-serch-input-container-mobile'>
             <p className='catalog-page-searching-text-mobile'>Поиск</p>
             <label className='catalog-page-label-mobile'>
-                <img src='./img/edit.png' alt='edit-svg' className='catalog-page-edit-svg'/>
+                <img src='./img/edit.png' alt='edit-svg' className='catalog-page-edit-svg-mobile'/>
                 <input 
-                    placeholder='Введите наименование, код, каталожный номер или производителя' 
+                    placeholder='Введите наименование, код...' 
                     className='catalog-page-input-params-mobile'
                 />
             </label>

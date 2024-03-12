@@ -1,21 +1,24 @@
 .account-page-mobile{
-    padding: 1vw 4.44vw;
+    padding: 24px 16px;
     background-color: #EDEDED;
+    height: 95vh;
 }
 
 .account-page-head-mobile{
     font-family: 'Bicubik', sans-serif;
-    font-size: 2.5vw;
+    font-size: 20px;
     font-weight: 400;
+    text-align: center;
 }
 
 .account-page-btn-cont-mobile{
-    padding: 2vw 0vw;
+    display: flex;
+    justify-content: space-around;
 }
 
 .account-page-btn-cont-mobile > button {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4vw;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0em;
     text-align: left;
@@ -31,7 +34,7 @@
     margin-left: 5vw;
 }
 
-.account-page-btn-cont-mobile > button.active::before {
+.account-page-btn-cont-mobile > button.active-mobile::before {
     content: ''; 
     position: absolute; 
     bottom: 0; 
@@ -43,16 +46,13 @@
 
 .account-page-input-container-mobile{
     padding: 2vw 0vw;
-    width: 60%;
-}
-
-.account-page-input-container-2-mobile > label{
-    padding-right: 13vw;
+    width: 100%;
 }
 
 .account-page-input-container-p-text-mobile{
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.97vw;
+    font-size: 14px;
+    padding: 12px 0;
     font-weight: 500;
     line-height: 1.67vw;
     letter-spacing: -0.011em;
@@ -61,20 +61,26 @@
     margin-bottom: 0.56vw;
 }
 
-.account-page-input-container-2-mobile > label > input{
-    padding: 0.5vw 0vw 0.5vw 1vw;
-    width: 170%;
+.account-page-input-container-mobile > label{
+    padding: 48px 0;
 }
 
-.account-page-input-container-2-mobile{
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 2vw;
+
+.account-page-input-container-mobile > label > input{
+    padding: 0.5vw 0vw 0.5vw 4vw;
+    height: 36px;
+    width: 95%;
+    font-size: 14px;
 }
+
+.account-page-input-container-mobile > label > input::placeholder{
+    font-size: 14px;
+}
+
 
 .account-page-last-input-mobile > input{
     padding: 0.5vw 0vw 0.5vw 1vw;
-    width: 93%;
+    width: 100%;
 }
 
 .account-page-order-container-mobile{
@@ -86,15 +92,16 @@
 
 .account-page-order-number-text-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4vw;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0em;
     text-align: left;
+    padding-right: 24px;
 }
 
 .account-page-order-assemble-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4vw;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0em;
     color: black; 
@@ -102,7 +109,7 @@
   
 .account-page-order-arrived-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4vw;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0em;
     color: #4D702B; 
@@ -110,7 +117,7 @@
   
 .account-page-order-canceled-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4vw;
+    font-size: 18px;
     font-weight: 400;
     letter-spacing: 0em;
     margin-right: 8.5vw;
@@ -119,14 +126,14 @@
 
 .account-page-order-delivery-text-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0em;
 }
 
 .account-page-order-details-text-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1vw;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0em;
     cursor: pointer;
@@ -141,14 +148,14 @@
 }
 
 .account-page-exit-btn-mobile{
-    width: 1.2vw;
+    width: 5vw;
     height: auto;
-    padding: 0.5vw 0.5vw 0.5vw 0vw;
+    padding: 1.5vw 1.5vw 1.5vw 0vw;
 }
 
 .account-page-exit-btn-cont-mobile > p{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.4vw;
+    font-size: 24px;
     font-weight: 400;
     letter-spacing: 0em;
 }

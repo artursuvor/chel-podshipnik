@@ -303,7 +303,7 @@
 
 .home-catalog-section-mobile{
     background-color: #343336;
-    padding: 16px;
+    padding: 24px 16px;
 }
 
 .home-catalog-heading-mobile{
@@ -325,11 +325,11 @@
     white-space: pre-line;
 }
 
-.home-catalog-grid-mobile{
-    padding: 24px 0;
+.home-catalog-grid-mobile-1{
+    padding-top: 24px;
 }
 
-.home-catalog-grid-mobile p{
+.home-catalog-grid-mobile-1 p, .home-catalog-grid-mobile-2 p{
     font-family: 'Bicubik', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -350,10 +350,15 @@
     cursor: pointer;
 }
 .home-catalog-grid-pins-mobile{
-    background-color: red;
     width: 100%;
-    padding: 10px;
+    padding-right: 8px;
 }
+
+.home-catalog-grid-oil-mobile{
+    width: 100%;
+    padding-left: 8px;
+}
+
 .home-catalog-grid-pins-background-mobile{
     background-color: #797674;  
     width: 100%; 
@@ -380,8 +385,19 @@
     color: #EDEDED;
 }
 
+.home-catalog-grid-text-mobile{
+    font-family: 'Bicubik', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.78vw;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #EDEDED;
+}
+
 .home-catalog-grid-lubricant-background-mobile{
     background-color: #797674;
+    width: 100%;
     height: 160px;
     position: relative;
     cursor: pointer;
@@ -389,9 +405,20 @@
 
 .home-catalog-grid-instrument-background-mobile{
     background-color: #797674;   
+    width: 100%;
     height: 160px;
     position: relative;
     cursor: pointer;
+}
+
+.home-catalog-grid-lubricant-mobile{
+    width: 100%;
+    padding-right: 8px;
+}
+
+.home-catalog-grid-instrument-mobile{
+    width: 100%;
+    padding-left: 8px;
 }
 
 .home-catalog-grid-key-background-mobile{
@@ -403,23 +430,22 @@
 
 .home-catalog-bearing-1-mobile{
     position: absolute;
-    top: 11%;
-    left: 35%;
-    width: 12vw;
+    left: 15%;
+    height: 100%;
 }
 
 .home-catalog-bearing-2-mobile{
     position: absolute;
-    top: 15%;
-    left: 30%;
-    width: 10vw;
+    top: 0;
+    right: 0;
+    height: 75%;
 }
 
 .home-catalog-bearing-3-mobile{
     position: absolute;
     top: 15%;
-    left: 30%;
-    width: 10vw;
+    left: 20%;
+    width: 65%;
 }
 
 .home-catalog-watch-all-button-mobile{
@@ -443,33 +469,29 @@
 
 .home-delivery-section-mobile{
     background-color: #EDEDED;
-    padding: 6vw 4.44vw;
-    display: grid;
-    grid-template-columns: 50% 49%;
-    gap: 4vw;
+    padding: 24px 16px;
 }
 
 .home-delivery-head-mobile{
     font-family: 'Bicubik', sans-serif;
-    font-size: 2.22vw;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 2.78vw;
     letter-spacing: 0em;
     text-align: left;
     color: black;
 }
 
 .arrow-down-mobile{
-    width: 8vw;
-    height: 8vw;
+    width: 48px;
+    height: 48px;
     justify-self: end;
     transform: rotate(-90deg);
     transition: transform 0.3s ease; 
 }
   
 .arrow-down-anim-mobile{
-    width: 8vw;
-    height: 8vw;
+    width: 48px;
+    height: 48px;
     justify-self: end;
     transform: rotate(0deg);
     transition: transform 0.3s ease; 
@@ -480,23 +502,22 @@
     cursor: pointer;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    width: 45vw;
-    padding: 1vw 0;
+    align-items: center;
 }
 
 .home-delivery-drop-menu-2-mobile{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     border-bottom: 1px solid black;
-    width: 45vw;
 }
 
 .home-delivery-drop-menu-head-text-1-mobile{
     font-family: "Poppins", sans-serif;
-    font-size: 2vw;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 2.5vw;
+    line-height: 27px;
     letter-spacing: 0em;
     text-align: left;
     white-space: pre-line; 
@@ -504,7 +525,7 @@
 
 .home-delivery-drop-menu-head-text-2-mobile{
     font-family: "Poppins", sans-serif;
-    font-size: 2vw;
+    font-size: 16px;
     font-weight: 400;
     line-height: 2.5vw;
     letter-spacing: 0em;
@@ -515,49 +536,38 @@
 
 .home-delivery-drop-menu-text-1-mobile{
     font-family: "Poppins", sans-serif;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 2.5vw;
-    letter-spacing: 0em;
+    line-height: 27px;
     text-align: left;
     white-space: pre-line;
 }
 
 .home-delivery-drop-menu-text-2-mobile{
     font-family: "Poppins", sans-serif;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 2.5vw;
-    letter-spacing: 0em;
+    line-height: 27px;
     text-align: left;
     white-space: pre-line;
-    margin-top: 15vw;
 }
-
+.companies{
+    width: 100%;
+}
 /* 5th section */
 
 .home-contacts-section-mobile{
     background-color: #525150;
-    padding: 5vw 4.44vw;
+    padding: 16px 16px 48px 16px;
 }
 
 .home-contacts-head-mobile{
     font-family: 'Bicubik', sans-serif;
-    font-size: 2.22vw;
+    font-size: 20px;
     font-weight: 400;
     line-height: 2.78vw;
-    letter-spacing: 0em;
     text-align: left;
     color: white;
-}
-
-.home-contacts-container-mobile{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.home-contacts-container-mobile > div {
-    margin-right: 5vw;  
 }
 
 .home-contacts-container-mobile > div:last-child {
@@ -570,16 +580,16 @@
 }
 
 .home-contacts-container-mobile > div > img{
-    width: 1.5vw;
-    height: 1.5vw;
-    padding-right: 1vw;
+    width: 24px;
+    height: 24px;
+    padding-right: 10px;
 }
 
 .home-contacts-container-mobile > div > p{
     font-family: "Poppins", sans-serif;
-    font-size: 1.5vw;
+    font-size: 17px;
     font-weight: 400;
-    line-height: 2.5vw;
+    line-height: 25px;
     letter-spacing: 0em;
     text-align: left;
     white-space: pre-line;
@@ -599,58 +609,58 @@
 
 .map-container-mobile{
     width: 100%; 
-    height: 20vw;
+    height: 240px;
 }
   
 .map-container-mobile iframe{
     width: 100%; 
-    height: 20vw;
+    height: 240px;
 }
 
-/* 5th section */
+/* 6th section */
 
 .home-form-sending-section-mobile{
     background-color: #EDEDED;
-    padding: 5vw 4.44vw 1vw 4.44vw;
+    padding: 24px 24px 24px 16px;
 }
 
 .home-form-sending-head-mobile{
     font-family: 'Bicubik', sans-serif;
-    font-size: 2.22vw;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 2.78vw;
-    letter-spacing: 0em;
     text-align: left;
 }
 
-.home-form-mobile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.home-form-cont{
+    position: relative;
+    padding-bottom: 16px;
 }
 
-.home-form-1-mobile{
-    display: flex;
-    padding: 1vw;
-    position: relative;
+
+.home-form-cont-4{
+    margin-top: -16px;
 }
 
 .input-mail-mobile{
-    height: 1.5vw;
-    padding: 0.69vw 3vw;
-    width: 27vw;
+    position: relative;
+    height: 48px;
+    width: 100%;
+}
+
+.input-mail-mobile::-ms-value{
+    padding-left: 10px;
 }
 
 .edit-svg-input-mail-mobile{
     position: absolute;
     top:62%;
     left: 3%;
+    z-index: 100;
 }
 
 .input-telephone-mobile{
-    height: 1.5vw;
-    padding: 0.69vw 1vw;
-    width: 27vw;
+    height: 48px;
+    width: 100%;
 }
 
 .home-form-2-mobile{
@@ -658,27 +668,25 @@
 }
 
 .input-message-mobile {
-    width: 61vw;
-    padding: 1vw;
-    padding-bottom: 10vw;
+    width: 80%;
+    padding-right: 20vw;
+    padding-bottom: 100px;
     border: 1px solid #E0E0E0;
     word-wrap: break-word; 
     outline: none;
     resize: none; 
     overflow: hidden; 
-    
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.11vw;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.67vw;
     letter-spacing: -0.011em;
 }
 
 .input-message-mobile::placeholder{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.11vw;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 1.67vw;
+    width: 75%;
     letter-spacing: -0.011em;
     text-align: left;
     color: #A7A7A7;
@@ -686,9 +694,9 @@
 
 .char-count-mobile{
     position: absolute;
-    top: 23%;
-    right: 2vw;
-    font-size: 1vw;
+    top: 15%;
+    right: 0;
+    font-size: 14px;
     color:#A7A7A7;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -701,9 +709,8 @@
 }
 
 .input-captcha-mobile{
-    width: 57vw;
-    height: 1.5vw;
-    padding: 0.69vw 3vw;
+    width: 100%;
+    height: 48px;
 }
 
 .edit-svg-input-captcha-mobile{
@@ -714,19 +721,18 @@
 
 .home-details-searching-submit-button-mobile{
     font-family: 'Poppins', sans-serif;
-    font-size: 1.67vw;
+    font-size: 18px;
     font-weight: 400;
     line-height: 2.5vw;
     letter-spacing: 0em;
-    padding: 0.5vw 1.5vw;
-    margin: 0vw 1vw;
-    text-align: left;
+    padding: 16px;
+    width: 103%;
+    text-align: center;
     border: none;
     color: #fff;
     background-color: #FF6421;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease; 
-    margin-left: 52vw;
 }
 
 .home-details-searching-submit-button-mobile:hover{
@@ -735,6 +741,6 @@
 }
 
 .home-details-searching-button-container-mobile{
-    padding: 4vw 0;
+    padding: 40px 0;
     margin: 0;
 }
