@@ -103,6 +103,20 @@ const HomeMobile: React.FC = () => {
     }
   };
 
+  const scrollToSectionDelivery = () => {
+    const section = document.getElementById('delivery');
+    if (section !== null) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToSectionContacts = () => {
+    const section = document.getElementById('contacts');
+    if (section !== null) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="home-container-mobile">
         <div className='home-main-menu-section-mobile'>
@@ -122,12 +136,12 @@ const HomeMobile: React.FC = () => {
             </div>
             <div className='home-main-flex-cont'>
                 <div className='home-main-cont-2'>
-                    <div className='home-main-menu-section-delivery-mobile'>
+                    <div className='home-main-menu-section-delivery-mobile' onClick={scrollToSectionDelivery}>
                         <p className='home-main-menu-section-text-2-mobile'>ДОСТАВКА</p>
                     </div>
                 </div>
                 <div className='home-main-cont-3'>
-                    <div className='home-main-menu-section-contacts-mobile'>
+                    <div className='home-main-menu-section-contacts-mobile' onClick={scrollToSectionContacts}>
                         <p className='home-main-menu-section-text-2-mobile'>КОНТАКТЫ</p>
                     </div>
                 </div>
@@ -275,7 +289,7 @@ const HomeMobile: React.FC = () => {
             </div>
             <p className='home-catalog-grid-text-mobile'>ПРЕСС-МАСЛЕНКИ</p>
         </div>
-        <div className='home-delivery-section-mobile'>
+        <div className='home-delivery-section-mobile' id='delivery'>
             <div>
                 <p className='home-delivery-head-mobile'>ДОСТАВКА</p>
                 <div className='home-delivery-drop-menu-mobile'>
@@ -322,7 +336,7 @@ const HomeMobile: React.FC = () => {
             <div>
             </div>
         </div>
-        <div className='home-contacts-section-mobile'>
+        <div className='home-contacts-section-mobile' id='contacts'>
             <p className='home-contacts-head-mobile'>КОНТАКТЫ</p>
             <div className='home-contacts-container-mobile'>
                 <div className='home-contacts-container-5-mobile'>

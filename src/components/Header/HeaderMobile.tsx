@@ -73,16 +73,6 @@ const HeaderMobile = () => {
       img: '/img/bearing-2.png',
       subcategory: 'Подшипниковые узлы, корпуса и комплектующие',
     },
-    {
-      name: 'Подшипники',
-      brandName: 'Бренд 3',
-      isAvailable: true,
-      sizes: 'Various sizes',
-      article: 'A12345',
-      pricePerUnit: '19.99',
-      img: '/img/bearing-2.png',
-      subcategory: 'Подшипниковые узлы, корпуса и комплектующие',
-    },
   ];
 
   const [cartQuantities, setCartQuantities] = useState<{ [key: string]: number }>({});
@@ -127,6 +117,11 @@ const HeaderMobile = () => {
             alt='header-shopping-cart-svg' 
             className='header-shopping-cart-svg-mobile'
             onClick={toggleCartVisibility}
+          />
+          <img 
+            src='/img/shopping-cart-status.svg' 
+            alt='header-shopping-cart-status' 
+            className={sampleProductsToAddToCart.length > 0 ? 'header-shopping-cart-status-svg-m' : 'header-shopping-cart-status-hide-svg'}
           />
           {isCartVisible && (
             <div className='header-shopping-cart-mobile'>

@@ -9,18 +9,6 @@
   }
 }
 
-header {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #97918C;
-  height: 80px;
-  padding: 0px 4.4vw 0px 4.4vw;
-  transition: background-color 0.3s ease; 
-}
-
 .sticky-header-mobile {
   display: flex;
   position: fixed;
@@ -85,7 +73,6 @@ header {
   text-decoration: none;
 }
 
-
 .header-contact-info-not-main-mobile a {
   font-family: "Poppins", sans-serif;
   font-size: 1.67vw;
@@ -100,6 +87,11 @@ header {
 
 .header-contact-info-not-main-mobile a:hover {
   color: #ffffff; 
+}
+
+.header-shopping-cart-status-svg-m{
+  position: absolute;
+  right: 20%;
 }
 
 .header-shopping-cart-svg-mobile{

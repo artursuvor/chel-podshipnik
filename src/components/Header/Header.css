@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #97918C;
-  padding: 2.22vh 4.4vw 4.44vh 4.4vw;
+  padding: 10px 4.4vw 20px 4.4vw;
   transition: background-color 0.3s ease; 
 }
 
@@ -28,7 +28,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #97918C;
-  padding: 2.22vh 4.4vw 4.44vh 4.4vw;
+  padding: 10px 4.4vw 20px 4.4vw;
   z-index: 1000;
   animation: fadeIn 0.6s ease; 
 }
@@ -99,6 +99,17 @@ header {
 
 .header-contact-info-not-main a:hover {
   color: #ffffff; 
+}
+
+.header-shopping-cart-status-svg{
+  position: absolute;
+  width: 0.8vw;
+  right: 13%;
+  top: 23%;
+}
+
+.header-shopping-cart-status-hide-svg{
+  display: none;
 }
 
 .header-shopping-cart-svg{

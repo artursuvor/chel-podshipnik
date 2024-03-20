@@ -68,16 +68,6 @@ const Header = () => {
       brandName: 'Бренд 3',
       isAvailable: true,
       sizes: 'Various sizes',
-      article: 'A1234',
-      pricePerUnit: '19.99',
-      img: '/img/bearing-2.png',
-      subcategory: 'Подшипниковые узлы, корпуса и комплектующие',
-    },
-    {
-      name: 'Подшипники',
-      brandName: 'Бренд 3',
-      isAvailable: true,
-      sizes: 'Various sizes',
       article: 'A12345',
       pricePerUnit: '19.99',
       img: '/img/bearing-2.png',
@@ -109,7 +99,7 @@ const Header = () => {
     console.log('1');
   };
   return (
-    <header className={isHomePage ? (isSticky ? 'sticky-header' : '') : 'header-not-main'}>
+    <header className={isHomePage ? (isSticky ? 'sticky-header' : 'not-sticky-header') : 'header-not-main'}>
       <img 
         src='./img/main-logo.png' 
         alt='header-main-logo' 
@@ -123,10 +113,15 @@ const Header = () => {
         </div>
         <div className='header-shopping-cart-cont'>
           <img 
-            src='./img/shopping-cart.png' 
+            src='/img/shopping-cart.png' 
             alt='header-shopping-cart-svg' 
             className='header-shopping-cart-svg'
             onClick={toggleCartVisibility}
+          />
+          <img 
+            src='/img/shopping-cart-status.svg' 
+            alt='header-shopping-cart-status' 
+            className={sampleProductsToAddToCart.length > 0 ? 'header-shopping-cart-status-svg' : 'header-shopping-cart-status-hide-svg'}
           />
           {isCartVisible && (
             <div className='header-shopping-cart'>

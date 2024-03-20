@@ -102,6 +102,21 @@ const Home: React.FC = () => {
       console.error('Произошла ошибка:', error);
     }
   };
+
+  const scrollToSectionDelivery = () => {
+    const section = document.getElementById('delivery');
+    if (section !== null) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToSectionContacts = () => {
+    const section = document.getElementById('contacts');
+    if (section !== null) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="home-container">
         <div className='home-main-menu-section'>
@@ -117,11 +132,11 @@ const Home: React.FC = () => {
                 <img src='/img/catalog-ph-2.png' alt='catalog-ph-2' className='home-main-menu-section-catalog-ph-2'/>
                 <p className='home-main-menu-section-text-2'>КАТАЛОГ</p>
             </div>
-            <div className='home-main-menu-section-delivery'>
+            <div className='home-main-menu-section-delivery' onClick={scrollToSectionDelivery}>
                 <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
                 <p className='home-main-menu-section-text-2'>ДОСТАВКА</p>
             </div>
-            <div className='home-main-menu-section-contacts'>
+            <div className='home-main-menu-section-contacts' onClick={scrollToSectionContacts}>
                 <img src='/img/button_circle.png' alt='button-circle' className='button-circle'/>
                 <p className='home-main-menu-section-text-2'>КОНТАКТЫ</p>
             </div>
@@ -257,7 +272,7 @@ const Home: React.FC = () => {
                 Смотреть все
             </button>
         </div>
-        <div className='home-delivery-section'>
+        <div className='home-delivery-section' id='delivery'>
             <div>
                 <p className='home-delivery-head'>ДОСТАВКА</p>
                 <div className='home-delivery-drop-menu'>
@@ -304,7 +319,7 @@ const Home: React.FC = () => {
                 )}
             </div>
         </div>
-        <div className='home-contacts-section'>
+        <div className='home-contacts-section' id='contacts'>
             <p className='home-contacts-head'>КОНТАКТЫ</p>
             <div className='home-contacts-container'>
                 <div className='home-contacts-container-1'>
@@ -344,7 +359,6 @@ const Home: React.FC = () => {
                 <div className='home-form-1'>
                     <label>
                         <p className='home-details-searching-text'>Ваша почта</p>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-mail'/>
                         <input 
                             placeholder='На эту почту придет ответ' 
                             className='input-mail'
@@ -378,7 +392,6 @@ const Home: React.FC = () => {
                 <div className='home-form-3'>
                     <p className='home-details-searching-text'>CAPTCHA</p>
                     <label>
-                        <img src='./img/edit.png' alt='edit-svg' className='edit-svg-input-captcha'/>
                         <input 
                             placeholder='Напишите цифрой сколько будет' 
                             className='input-captcha'

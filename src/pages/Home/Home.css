@@ -620,8 +620,8 @@ label{
 
 .input-mail{
     height: 1.5vw;
-    padding: 0.69vw 3vw;
-    width: 27vw;
+    padding: 0.69vw 1vw;
+    width: 31vw;
 }
 
 .edit-svg-input-mail{
@@ -685,9 +685,9 @@ label{
 }
 
 .input-captcha{
-    width: 57vw;
+    width: 61vw;
     height: 1.5vw;
-    padding: 0.69vw 3vw;
+    padding: 0.69vw 1vw;
 }
 
 .edit-svg-input-captcha{
