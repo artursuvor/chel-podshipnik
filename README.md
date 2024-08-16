@@ -8,7 +8,7 @@ Chel Bearing
 
 ## Demo
 
-[Project Demo](https://chel-podshipnik.vercel.app)
+[Project Demo](https://fake-eshop-nextjs.vercel.app/)
 
 ## Technologies Used
 
