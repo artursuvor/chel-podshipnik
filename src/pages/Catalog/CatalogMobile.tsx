@@ -124,7 +124,6 @@ const CatalogMobile: React.FC = () => {
 
     // Хлебные крошки
     const [breadcrumbTrail, setBreadcrumbTrail] = useState<string[]>(['Catalog']);
-    const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
 
     useEffect(() => {
       const breadcrumbs = ['Catalog'];
@@ -148,7 +147,6 @@ const CatalogMobile: React.FC = () => {
         setIsSubcategoryMount(hasSubcategories);
     
         // Установка подкатегорий в зависимости от выбранных крошек
-        const lastBreadcrumb = newTrail[newTrail.length - 1];
         const lastSubcategory = newTrail.length > 2 ? newTrail[newTrail.length - 2] : null;
     
         if (lastSubcategory) {

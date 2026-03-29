@@ -6,11 +6,6 @@ import './HeaderMobile.css'
 const HeaderMobile = () => {
   const [isSticky, setSticky] = useState(false);
   const [isCartVisible, setCartVisible] = useState(false);
-  const [sliderValue, setSliderValue] = useState(0);
-
-  const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSliderValue(Number(event.target.value));
-  };
 
   const toggleCartVisibility = () => {
     setCartVisible(!isCartVisible);

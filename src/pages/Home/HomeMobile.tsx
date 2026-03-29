@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
 import FooterMobile from "../../components/Footer/FooterMobile.tsx";
 import './HomeMobile.css'; 
 

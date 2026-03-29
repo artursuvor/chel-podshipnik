@@ -15,21 +15,19 @@ Chel Bearing
 - React
 - TypeScript
 - Libraries: 
-  - `@testing-library/jest-dom`: "^5.17.0"
-  - `@testing-library/react`: "^13.4.0"
-  - `@testing-library/user-event`: "^13.5.0"
-  - `react`: "^18.2.0"
-  - `react-dom`: "^18.2.0"
+  - `react`: "^18.3.1"
+  - `react-dom`: "^18.3.1"
   - `react-responsive`: "^9.0.2"
-  - `react-router-dom`: "^6.22.1"
-  - `web-vitals`: "^2.1.4"
+  - `react-router-dom`: "^6.30.3"
+  - `vite`: "^7.1.7"
 
 ## Installation and Running
 
 1. Clone the repository: `git clone repository_link`
 2. Navigate to the project directory: `cd your_project`
 3. Install dependencies: `npm install` or `yarn install`
-4. Run the project: `npm start` or `yarn start`
+4. Run the project: `npm start` or `npm run dev`
+5. Build the project: `npm run build`
 
 ## Author
 
